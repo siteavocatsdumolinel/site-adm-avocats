@@ -71,7 +71,6 @@ export default function HeroSection() {
             transition={{ duration: 0.7, ease: 'easeOut' }}
             className="flex items-center gap-3 mb-8"
           >
-          
           </motion.div>
 
 
