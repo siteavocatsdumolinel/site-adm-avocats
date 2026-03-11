@@ -13,8 +13,9 @@ export default function GoogleAnalytics() {
     if (!GA_ID) return
     const consent = getConsent()
     if (consent === 'accepted') setLoadScript(true)
-    const onConsent = (e: CustomEvent<{ detail: string }>) => {
-      if (e.detail === 'accepted') setLoadScript(true)
+    const onConsent = (e: Event) => {
+      const detail = (e as CustomEvent<string>).detail
+      if (detail === 'accepted') setLoadScript(true)
     }
     window.addEventListener('analytics-consent', onConsent as EventListener)
     return () => window.removeEventListener('analytics-consent', onConsent as EventListener)
