@@ -63,6 +63,7 @@ export default function HeroSection() {
 
       {/* Content — z-20 pour rester au-dessus du bloc du bas et garder les boutons cliquables */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24">
+        
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
