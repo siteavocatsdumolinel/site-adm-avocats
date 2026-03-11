@@ -124,21 +124,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Indicateurs du carrousel + Découvrir */}
+      {/* Découvrir */}
       <div className="absolute bottom-0 left-0 right-0 pt-20 pb-10 px-6 lg:px-8 z-[5] flex flex-col items-center gap-8">
-        <div className="flex justify-center gap-2">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentSlide(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === currentSlide ? 'bg-[#E5493D] w-8' : 'bg-white/50 hover:bg-white/70 w-1.5'
-              }`}
-              aria-label={`Image ${i + 1}`}
-            />
-          ))}
-        </div>
-
         <a
           href="#presentation"
           className="flex flex-col items-center gap-3 text-white hover:text-[#E5493D] transition-colors duration-300 group"
