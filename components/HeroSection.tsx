@@ -62,7 +62,7 @@ export default function HeroSection() {
       />
 
       {/* Content — z-20 pour rester au-dessus du bloc du bas et garder les boutons cliquables */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-32 sm:pb-24 md:pb-0">
         
         <div className="max-w-4xl">
           <motion.div
@@ -94,7 +94,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="text-white/80 text-lg md:text-xl font-light tracking-wide mb-12 max-w-lg"
+            className="text-white/80 text-lg md:text-xl font-light tracking-wide mb-8 sm:mb-12 max-w-lg"
           >
             Cabinet d'avocats au Barreau de Lille
           </motion.p>
