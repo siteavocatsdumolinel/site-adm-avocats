@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const competencesLinks = [
   { label: 'Droit commercial', href: '/competences#droit-commercial' },
@@ -59,7 +60,7 @@ export default function Navbar() {
   return (
     <nav
       ref={dropdownRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${navBg}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -171,18 +172,26 @@ function DropdownItem({ label, href, isOpen, onToggle, links, linkClass }: Dropd
         </svg>
       </button>
 
-      {isOpen && (
-        <div className="absolute top-full left-0 mt-1 w-56 bg-white border border-[#313E35]/10 shadow-lg py-1">
-          <Link href={href} className="block px-4 py-2.5 text-sm text-[#E5493D] hover:bg-[#f2f2f2] transition-colors duration-150 border-b border-[#313E35]/5 mb-1" onClick={onToggle}>
-            Voir tout
-          </Link>
-          {links.map((link) => (
-            <Link key={link.href} href={link.href} className="block px-4 py-2.5 text-sm text-[#4d6263] hover:text-[#313E35] hover:bg-[#f2f2f2] transition-colors duration-150" onClick={onToggle}>
-              {link.label}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+            className="absolute top-full left-0 mt-1 w-56 bg-white border border-[#313E35]/10 shadow-lg py-1 rounded-md overflow-hidden"
+          >
+            <Link href={href} className="block px-4 py-2.5 text-sm text-[#E5493D] hover:bg-[#f8f9f9] transition-colors duration-200 border-b border-[#313E35]/5 mb-1" onClick={onToggle}>
+              Voir tout
             </Link>
-          ))}
-        </div>
-      )}
+            {links.map((link) => (
+              <Link key={link.href} href={link.href} className="block px-4 py-2.5 text-sm text-[#4d6263] hover:text-[#313E35] hover:bg-[#f8f9f9] transition-colors duration-200" onClick={onToggle}>
+                {link.label}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

@@ -35,7 +35,7 @@ export default function Footer() {
               <p>59290 Wasquehal</p>
               <a
                 href="tel:0320121060"
-                className="inline-block mt-2 text-[#E5493D] hover:text-white transition-colors"
+                className="inline-block mt-2 text-[#E5493D] hover:text-white transition-colors duration-200"
               >
                 03 20 12 10 60
               </a>
@@ -49,22 +49,22 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/competences" className="text-white/50 hover:text-white transition-colors">
+                <Link href="/competences" className="text-white/50 hover:text-white transition-colors duration-200 inline-block hover:translate-x-0.5">
                   Compétences
                 </Link>
               </li>
               <li>
-                <Link href="/#equipe" className="text-white/50 hover:text-white transition-colors">
+                <Link href="/#equipe" className="text-white/50 hover:text-white transition-colors duration-200 inline-block hover:translate-x-0.5">
                   Notre équipe
                 </Link>
               </li>
               <li>
-                <Link href="/informations-et-contact" className="text-white/50 hover:text-white transition-colors">
+                <Link href="/informations-et-contact" className="text-white/50 hover:text-white transition-colors duration-200 inline-block hover:translate-x-0.5">
                   Infos & Contact
                 </Link>
               </li>
               <li>
-                <Link href="/le-blog" className="text-white/50 hover:text-white transition-colors">
+                <Link href="/le-blog" className="text-white/50 hover:text-white transition-colors duration-200 inline-block hover:translate-x-0.5">
                   Blog
                 </Link>
               </li>
@@ -76,11 +76,11 @@ export default function Footer() {
           <p className="text-white/30 text-xs tracking-wide">
             © ADM 2018 – 2026. Tous droits réservés.
           </p>
-          <div className="flex items-center gap-6 text-xs">
-            <Link href="/mentionslegales" className="text-white/30 hover:text-white/60 transition-colors">
+          <div className="flex items-center justify-center sm:justify-end gap-6 text-xs">
+            <Link href="/mentionslegales" className="text-white/30 hover:text-white/60 transition-colors duration-200">
               Mentions légales
             </Link>
-            <Link href="/politique-de-confidentialite" className="text-white/30 hover:text-white/60 transition-colors">
+            <Link href="/politique-de-confidentialite" className="text-white/30 hover:text-white/60 transition-colors duration-200">
               Politique de confidentialité
             </Link>
           </div>

@@ -23,6 +23,14 @@ export default function HeroSection() {
   const [useDemo, setUseDemo] = useState(false)
   const images = useDemo ? DEMO_IMAGES : CAROUSEL_IMAGES
 
+  const handleDiscoverClick = () => {
+    if (typeof document === 'undefined') return
+    const section = document.getElementById('presentation')
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length)
@@ -61,23 +69,22 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Content — z-20 pour rester au-dessus du bloc du bas et garder les boutons cliquables */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-32 sm:pb-24 md:pb-0">
-        
-        <div className="max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="flex items-center gap-3 mb-8"
-          >
-          </motion.div>
+      {/* Content — z-20, centré horizontalement */}
+      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-32 sm:pb-24 md:pb-0 flex justify-center">
+        {/* Halo dégradé derrière le titre */}
+        <motion.div
+          aria-hidden="true"
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="pointer-events-none absolute -left-10 md:-left-4 -top-8 md:-top-4 w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-[#E5493D]/40 via-[#4d6263]/20 to-transparent blur-3xl"
+        />
 
-
+        <div className="relative max-w-4xl w-full text-center md:text-left">
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
+            transition={{ duration: 0.75, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="text-white font-bold leading-none mb-6"
             style={{
               fontFamily: 'var(--font-playfair)',
@@ -93,30 +100,31 @@ export default function HeroSection() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="text-white/80 text-lg md:text-xl font-light tracking-wide mb-8 sm:mb-12 max-w-lg"
+            transition={{ duration: 0.7, delay: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="text-white/80 text-lg md:text-xl font-light tracking-wide mb-8 sm:mb-12 max-w-lg mx-auto md:mx-0"
           >
             Cabinet d'avocats au Barreau de Lille
           </motion.p>
 
+
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.45, ease: 'easeOut' }}
-            className="flex flex-col sm:flex-row gap-4"
+            transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
           >
             <Link
               href="/competences"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E5493D] text-white text-sm font-semibold tracking-wider uppercase hover:bg-[#c73d32] transition-colors duration-300"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E5493D] text-white text-sm font-semibold tracking-wider uppercase rounded-sm hover:bg-[#c73d32] transition-all duration-300 hover:shadow-lg hover:shadow-[#E5493D]/20 hover:-translate-y-0.5"
             >
               Nos compétences
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
             <Link
               href="/informations-et-contact"
-              className="inline-flex items-center justify-center px-8 py-4 border border-white/40 text-white/90 text-sm tracking-wider hover:border-[#E5493D] hover:text-white transition-colors duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 border border-white/40 text-white/90 text-sm tracking-wider rounded-sm hover:border-[#E5493D] hover:text-white hover:bg-white/5 transition-all duration-300"
             >
               Nous contacter
             </Link>
@@ -124,12 +132,15 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Découvrir */}
-      <div className="absolute bottom-0 left-0 right-0 pt-20 pb-10 px-6 lg:px-8 z-[5] flex flex-col items-center gap-8">
-        <a
-          href="#presentation"
+      {/* Découvrir — léger float */}
+      <div className="absolute bottom-0 left-0 right-0 pt-20 pb-10 px-6 lg:px-8 z-[5] flex flex-col items-center justify-center gap-8">
+        <motion.button
+          type="button"
+          onClick={handleDiscoverClick}
           className="flex flex-col items-center gap-3 text-white hover:text-[#E5493D] transition-colors duration-300 group"
           aria-label="Voir la suite"
+          animate={{ y: [0, -6, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
         >
           <span className="text-xs font-medium tracking-[0.3em] uppercase">Découvrir</span>
           <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/60 group-hover:border-[#E5493D] group-hover:bg-white/5 transition-all duration-300">
@@ -137,9 +148,9 @@ export default function HeroSection() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </span>
-        </a>
+        </motion.button>
 
-        <div className="flex items-center justify-between w-full max-w-7xl text-white/60 text-[10px] tracking-[0.2em] uppercase">
+        <div className="flex items-center justify-between w-full max-w-7xl mx-auto text-white/60 text-[10px] tracking-[0.2em] uppercase">
           <span>Depuis 2006</span>
           <span>Wasquehal</span>
         </div>

@@ -36,7 +36,7 @@ export default function HomePage() {
       {/* PRÉSENTATION — style épuré, titre centré, listes à lignes rouges */}
       <section id="presentation" className="relative bg-white pt-20 pb-24 md:pt-28 md:pb-32 rounded-t-2xl shadow-[0_-4px_24px_rgba(49,62,53,0.06)]">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <FadeInSection>
+          <FadeInSection subtleScale>
             <div className="text-center mb-16 md:mb-20">
               <h2 className="text-[#313E35] text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-[0.12em] leading-tight mb-6 md:mb-8">
                 Cabinet d'avocats pluridisciplinaire en droit des affaires.
@@ -47,15 +47,15 @@ export default function HomePage() {
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-14 place-items-center">
             {[
               { title: 'Notre activité', items: ['Conseil et assistance', 'Défense et contentieux', 'Accompagnement et formation'], iconKey: 'activite' as const },
               { title: 'Nos qualités', items: ['Pragmatisme', 'Engagement', 'Exigence'], iconKey: 'qualites' as const },
               { title: 'Nos valeurs', items: ['Disponibilité', 'Confiance', 'Sécurité'], iconKey: 'valeurs' as const },
             ].map((col, i) => (
               <FadeInSection key={col.title} delay={i * 0.08}>
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-[#313E35] flex items-center justify-center mb-4 text-white [&_svg]:w-6 [&_svg]:h-6">
+                <div className="flex flex-col items-center text-center w-full max-w-xs">
+                  <div className="w-12 h-12 rounded-full bg-[#313E35] flex items-center justify-center mb-4 text-white [&_svg]:w-6 [&_svg]:h-6 shrink-0">
                     {getDepartmentIcon(col.iconKey)}
                   </div>
                   <p className="text-[#E5493D] text-sm font-medium italic mb-6 tracking-wide">
@@ -98,13 +98,17 @@ export default function HomePage() {
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 items-stretch">
             {competences.map((c, i) => (
-              <FadeInSection key={c.label} delay={i * 0.06}>
+              <FadeInSection key={c.label} delay={i * 0.06} subtleScale>
                 <Link
                   href={c.href}
-                  className="group flex flex-col items-center text-center bg-white rounded-xl p-6 md:p-8 h-full border border-[#313E35]/5 shadow-sm hover:shadow-lg hover:border-[#313E35]/10 hover:-translate-y-0.5 transition-all duration-300"
+                  className="group relative flex flex-col items-center text-center bg-white rounded-xl p-6 md:p-8 h-full border border-[#313E35]/5 shadow-sm hover:shadow-lg hover:shadow-[0_8px_24px_rgba(49,62,53,0.08)] hover:border-[#313E35]/10 hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden"
                 >
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-10 -top-px h-[2px] bg-gradient-to-r from-[#E5493D] via-[#e88b6b] to-[#4d6263] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  />
                   <div className="w-14 h-14 rounded-full bg-[#E5493D] flex items-center justify-center mb-6 text-white [&_svg]:w-7 [&_svg]:h-7">
                     {getDepartmentIcon(c.iconKey)}
                   </div>
@@ -134,7 +138,7 @@ export default function HomePage() {
       <section id="equipe" className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeInSection>
-            <div className="mb-16 text-center md:text-left">
+            <div className="mb-16 text-center">
               <p className="text-[#E5493D] text-xs tracking-[0.3em] uppercase mb-3">Le cabinet</p>
               <h2
                 className="text-[#313E35] text-3xl md:text-4xl font-semibold"
@@ -148,10 +152,17 @@ export default function HomePage() {
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {lawyers.map((lawyer) => (
-              <LawyerCard key={lawyer.name} {...lawyer} />
-            ))}
+          <div className="space-y-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 justify-items-center items-stretch">
+              {lawyers.slice(0, 3).map((lawyer, i) => (
+                <LawyerCard key={lawyer.name} {...lawyer} delay={i * 0.06} />
+              ))}
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 justify-items-center items-stretch">
+              {lawyers.slice(3).map((lawyer, i) => (
+                <LawyerCard key={lawyer.name} {...lawyer} delay={0.2 + i * 0.06} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -159,8 +170,8 @@ export default function HomePage() {
       {/* CTA Contact */}
       <section className="relative bg-[#313E35] py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} aria-hidden />
-        <div className="relative max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <FadeInSection>
+        <div className="relative max-w-3xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center">
+          <FadeInSection subtleScale>
             <p className="text-[#E5493D] text-xs tracking-[0.3em] uppercase mb-5">Prendre contact</p>
             <h2
               className="text-white text-3xl md:text-4xl lg:text-[2.5rem] font-semibold mb-6 leading-tight"
@@ -171,19 +182,19 @@ export default function HomePage() {
             <p className="text-white/70 text-base md:text-lg mb-12 max-w-xl mx-auto leading-relaxed">
               Notre équipe se tient disponible pour vous accompagner dans vos démarches juridiques.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
               <Link
                 href="/informations-et-contact#contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E5493D] text-white text-sm font-semibold tracking-wider uppercase rounded-sm hover:bg-[#c73d32] transition-colors duration-300"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E5493D] text-white text-sm font-semibold tracking-wider uppercase rounded-sm hover:bg-[#c73d32] hover:shadow-lg hover:shadow-[#E5493D]/25 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
               >
                 Nous contacter
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
               <a
                 href="tel:0320121060"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white/90 text-sm font-medium tracking-wide hover:border-white/60 hover:bg-white/5 transition-all duration-300 rounded-sm"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white/90 text-sm font-medium tracking-wide hover:border-white/60 hover:bg-white/5 transition-all duration-300 rounded-sm w-full sm:w-auto"
               >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 03 20 12 10 60
               </a>
             </div>
