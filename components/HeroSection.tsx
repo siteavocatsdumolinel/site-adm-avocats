@@ -42,7 +42,7 @@ export default function HeroSection() {
   }, [images.length])
 
   return (
-    <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden bg-[#313E35] mt-15">
+    <section className="relative z-0 min-h-[88vh] flex items-center justify-center overflow-hidden bg-[#313E35] pt-20">
       {/* Carrousel d'images en arrière-plan */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
