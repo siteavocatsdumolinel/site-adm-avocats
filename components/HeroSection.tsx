@@ -42,7 +42,7 @@ export default function HeroSection() {
   }, [images.length])
 
   return (
-    <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden bg-[#313E35]">
+    <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden bg-[#313E35] mt-15">
       {/* Carrousel d'images en arrière-plan */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -89,8 +89,8 @@ export default function HeroSection() {
         className="pointer-events-none absolute -bottom-32 md:-bottom-40 left-1/2 -translate-x-1/2 w-[130%] h-64 md:h-72 bg-[radial-gradient(circle_at_50%_0%,rgba(184,201,202,0.22),transparent_70%)]"
       />
 
-      {/* Content — z-20 */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-28 pb-32 sm:pb-24 md:pb-40">
+      {/* Contenu au premier plan */}
+      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-28 pb-16 sm:pb-20 md:pb-24 flex flex-col justify-between gap-12 min-h-[70vh]">
         {/* Halo dégradé derrière le titre */}
         <motion.div
           aria-hidden="true"
@@ -153,29 +153,29 @@ export default function HeroSection() {
             </Link>
           </motion.div>
         </div>
-      </div>
 
-      {/* Découvrir — léger float */}
-      <div className="absolute bottom-0 left-0 right-0 pt-20 pb-10 px-6 lg:px-8 z-30 flex flex-col items-center justify-center gap-8 pointer-events-auto">
-        <motion.button
-          type="button"
-          onClick={handleDiscoverClick}
-          className="flex flex-col items-center gap-3 text-white hover:text-[#E5493D] transition-colors duration-300 group"
-          aria-label="Voir la suite"
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <span className="text-xs font-medium tracking-[0.3em] uppercase">Découvrir</span>
-          <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/60 group-hover:border-[#E5493D] group-hover:bg-white/5 transition-all duration-300">
-            <svg className="h-4 w-4 translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </span>
-        </motion.button>
+        {/* Découvrir */}
+        <div className="flex flex-col items-center justify-center gap-6">
+          <motion.button
+            type="button"
+            onClick={handleDiscoverClick}
+            className="flex flex-col items-center gap-3 text-white hover:text-[#E5493D] transition-colors duration-300 group"
+            aria-label="Voir la suite"
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <span className="text-xs font-medium tracking-[0.3em] uppercase">Découvrir</span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/60 group-hover:border-[#E5493D] group-hover:bg-white/5 transition-all duration-300">
+              <svg className="h-4 w-4 translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </span>
+          </motion.button>
 
-        <div className="flex items-center justify-between w-full max-w-7xl mx-auto text-white/60 text-[10px] tracking-[0.2em] uppercase">
-          <span>Depuis 2006</span>
-          <span>Wasquehal</span>
+          <div className="flex items-center justify-between w-full max-w-7xl mx-auto text-white/60 text-[10px] tracking-[0.2em] uppercase">
+            <span>Depuis 2006</span>
+            <span>Wasquehal</span>
+          </div>
         </div>
       </div>
     </section>
