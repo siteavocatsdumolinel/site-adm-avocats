@@ -27,7 +27,10 @@ export default function HeroSection() {
     if (typeof document === 'undefined') return
     const section = document.getElementById('presentation')
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      const navOffset = 80
+      const rect = section.getBoundingClientRect()
+      const targetY = rect.top + window.pageYOffset - navOffset
+      window.scrollTo({ top: targetY, behavior: 'smooth' })
     }
   }
 
@@ -48,13 +51,13 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.9 }}
             className="absolute inset-0"
           >
             <img
               src={images[currentSlide]}
               alt=""
-              className="w-full h-full object-cover blur-[3px] scale-105"
+              className="w-full h-full object-cover blur-[4px] scale-110"
               onError={() => setUseDemo(true)}
             />
           </motion.div>
@@ -65,22 +68,40 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 z-[1]"
         style={{
-          background: 'linear-gradient(135deg, rgba(49, 62, 53, 0.85) 0%, rgba(77, 98, 99, 0.75) 50%, rgba(49, 62, 53, 0.9) 100%)',
+          background:
+            'radial-gradient(circle at 0% 0%, rgba(229, 73, 61, 0.42) 0, transparent 40%), radial-gradient(circle at 80% 20%, rgba(77, 98, 99, 0.26) 0, transparent 55%), linear-gradient(135deg, rgba(49, 62, 53, 0.9) 0%, rgba(77, 98, 99, 0.78) 50%, rgba(49, 62, 53, 0.94) 100%)',
         }}
       />
 
-      {/* Content — z-20, centré horizontalement */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-32 sm:pb-24 md:pb-0 flex justify-center">
+      {/* Décor de formes en arrière-plan */}
+      <motion.div
+        aria-hidden="true"
+        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+        animate={{ opacity: 0.75, scale: 1, y: 0 }}
+        transition={{ duration: 1.4, ease: [0.22, 0.61, 0.36, 1] }}
+        className="pointer-events-none absolute -right-32 md:-right-10 top-24 md:top-32 w-72 h-72 md:w-[22rem] md:h-[22rem] rounded-[40%] bg-gradient-to-br from-[#4d6263]/60 via-[#313E35]/40 to-[#E5493D]/30 blur-3xl"
+      />
+      <motion.div
+        aria-hidden="true"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 0.55, y: 0 }}
+        transition={{ duration: 1.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="pointer-events-none absolute -bottom-32 md:-bottom-40 left-1/2 -translate-x-1/2 w-[130%] h-64 md:h-72 bg-[radial-gradient(circle_at_50%_0%,rgba(184,201,202,0.22),transparent_70%)]"
+      />
+
+      {/* Content — z-20 */}
+      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-28 pb-32 sm:pb-24 md:pb-40">
         {/* Halo dégradé derrière le titre */}
         <motion.div
           aria-hidden="true"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="pointer-events-none absolute -left-10 md:-left-4 -top-8 md:-top-4 w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-[#E5493D]/40 via-[#4d6263]/20 to-transparent blur-3xl"
+          className="pointer-events-none absolute -left-10 md:left-0 -top-10 md:-top-6 w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-[#E5493D]/40 via-[#4d6263]/20 to-transparent blur-3xl"
         />
 
-        <div className="relative max-w-4xl w-full text-center md:text-left">
+        <div className="relative max-w-4xl w-full mx-auto text-center md:text-left">
+          {/* Titre */}
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
@@ -97,6 +118,7 @@ export default function HeroSection() {
             <span className="text-[#b8c9ca]">DU MOLINEL</span>
           </motion.h1>
 
+          {/* Sous-titre */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -107,6 +129,7 @@ export default function HeroSection() {
           </motion.p>
 
 
+          {/* Boutons */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,7 +138,7 @@ export default function HeroSection() {
           >
             <Link
               href="/competences"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E5493D] text-white text-sm font-semibold tracking-wider uppercase rounded-sm hover:bg-[#c73d32] transition-all duration-300 hover:shadow-lg hover:shadow-[#E5493D]/20 hover:-translate-y-0.5"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E5493D] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#c73d32] transition-all duration-300 hover:shadow-md hover:shadow-[#E5493D]/25 hover:-translate-y-0.5"
             >
               Nos compétences
               <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -124,7 +147,7 @@ export default function HeroSection() {
             </Link>
             <Link
               href="/informations-et-contact"
-              className="inline-flex items-center justify-center px-8 py-4 border border-white/40 text-white/90 text-sm tracking-wider rounded-sm hover:border-[#E5493D] hover:text-white hover:bg-white/5 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 border border-white/40 text-white/90 text-sm tracking-wider rounded-full hover:border-[#E5493D] hover:text-white hover:bg-white/5 transition-all duration-300"
             >
               Nous contacter
             </Link>
@@ -133,7 +156,7 @@ export default function HeroSection() {
       </div>
 
       {/* Découvrir — léger float */}
-      <div className="absolute bottom-0 left-0 right-0 pt-20 pb-10 px-6 lg:px-8 z-[5] flex flex-col items-center justify-center gap-8">
+      <div className="absolute bottom-0 left-0 right-0 pt-20 pb-10 px-6 lg:px-8 z-30 flex flex-col items-center justify-center gap-8 pointer-events-auto">
         <motion.button
           type="button"
           onClick={handleDiscoverClick}

@@ -24,7 +24,7 @@ export default function LawyerCard({ name, title, tags, photo, href, delay = 0 }
       className="w-full max-w-[280px] mx-auto h-full"
     >
       <Link href={href} className="group block h-full">
-        <div className="group/card relative bg-[#f8f9f9] hover:bg-white border border-[#313E35]/5 hover:border-[#313E35]/10 rounded-xl shadow-sm hover:shadow-lg hover:shadow-[#313E35]/06 hover:-translate-y-1 transition-all duration-300 ease-out h-full flex flex-col p-6 overflow-hidden h-[340px] md:h-[360px]">
+        <div className="group/card relative bg-[#f8f9f9] hover:bg-white border border-[#313E35]/5 hover:border-[#313E35]/12 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 ease-out h-full flex flex-col p-6 overflow-hidden h-[340px] md:h-[360px]">
           {/* Photo */}
           <div className="flex flex-col items-center mb-4">
             <div className="relative w-36 h-36 rounded-full overflow-hidden ring-2 ring-[#313E35]/5 group-hover:ring-[#E5493D]/25 transition-all duration-300">

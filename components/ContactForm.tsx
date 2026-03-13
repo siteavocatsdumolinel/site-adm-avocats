@@ -22,7 +22,7 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bg-[#f2f2f2] p-10 text-center">
+      <div className="bg-[#f2f2f2] rounded-2xl p-10 text-center shadow-sm">
         <div className="w-10 h-[2px] bg-[#E5493D] mx-auto mb-6" />
         <p
           className="text-[#313e35] text-xl font-semibold mb-3"
@@ -38,7 +38,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5 bg-[#f8f9f9] rounded-2xl p-6 md:p-8 shadow-sm">
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor="nom" className="block text-[#313e35]/60 text-xs tracking-[0.15em] uppercase mb-2">
@@ -51,7 +51,7 @@ export default function ContactForm() {
             required
             value={form.nom}
             onChange={handleChange}
-            className="w-full bg-[#f2f2f2] border border-[#313e35]/15 text-[#313e35] text-sm px-4 py-3 focus:outline-none focus:border-[#E5493D]/50 placeholder-[#313e35]/30 transition-colors duration-200"
+            className="w-full bg-white border border-[#313e35]/10 text-[#313e35] text-sm px-4 py-3 rounded-md focus:outline-none focus:border-[#E5493D]/60 placeholder-[#313e35]/30 transition-colors duration-200"
             placeholder="Votre nom"
           />
         </div>
@@ -66,7 +66,7 @@ export default function ContactForm() {
             required
             value={form.email}
             onChange={handleChange}
-            className="w-full bg-[#f2f2f2] border border-[#313e35]/15 text-[#313e35] text-sm px-4 py-3 focus:outline-none focus:border-[#E5493D]/50 placeholder-[#313e35]/30 transition-colors duration-200"
+            className="w-full bg-white border border-[#313e35]/10 text-[#313e35] text-sm px-4 py-3 rounded-md focus:outline-none focus:border-[#E5493D]/60 placeholder-[#313e35]/30 transition-colors duration-200"
             placeholder="votre@email.com"
           />
         </div>
@@ -82,7 +82,7 @@ export default function ContactForm() {
           name="sujet"
           value={form.sujet}
           onChange={handleChange}
-          className="w-full bg-[#f2f2f2] border border-[#313e35]/15 text-[#313e35] text-sm px-4 py-3 focus:outline-none focus:border-[#E5493D]/50 placeholder-[#313e35]/30 transition-colors duration-200"
+          className="w-full bg-white border border-[#313e35]/10 text-[#313e35] text-sm px-4 py-3 rounded-md focus:outline-none focus:border-[#E5493D]/60 placeholder-[#313e35]/30 transition-colors duration-200"
           placeholder="Objet de votre demande"
         />
       </div>
@@ -97,7 +97,7 @@ export default function ContactForm() {
           rows={6}
           value={form.message}
           onChange={handleChange}
-          className="w-full bg-[#f2f2f2] border border-[#313e35]/15 text-[#313e35] text-sm px-4 py-3 focus:outline-none focus:border-[#E5493D]/50 placeholder-[#313e35]/30 transition-colors duration-200 resize-none"
+          className="w-full bg-white border border-[#313e35]/10 text-[#313e35] text-sm px-4 py-3 rounded-md focus:outline-none focus:border-[#E5493D]/60 placeholder-[#313e35]/30 transition-colors duration-200 resize-none"
           placeholder="Décrivez votre situation ou votre demande…"
         />
       </div>
@@ -137,7 +137,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full sm:w-auto px-10 py-3.5 bg-[#E5493D] text-white text-sm font-semibold tracking-wider uppercase hover:bg-[#c73d32] transition-colors duration-300 mt-2"
+        className="w-full sm:w-auto px-10 py-3.5 bg-[#E5493D] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#c73d32] transition-colors duration-300 mt-2"
       >
         Envoyer
       </button>

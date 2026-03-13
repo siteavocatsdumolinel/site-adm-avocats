@@ -17,7 +17,7 @@ export default function ContactIcons({ email, linkedin, className = '' }: Contac
     <div className={`flex items-center justify-center gap-4 ${className}`}>
       <a
         href={mailHref}
-        className="flex items-center justify-center w-9 h-9 rounded-full border-2 border-[#4d6263]/40 text-[#4d6263] hover:border-[#E5493D] hover:text-[#E5493D] hover:bg-[#E5493D]/5 transition-all duration-300"
+        className="flex items-center justify-center w-9 h-9 rounded-full border border-[#4d6263]/40 text-[#4d6263] hover:border-[#E5493D] hover:text-[#E5493D] hover:bg-[#E5493D]/5 transition-all duration-300"
         aria-label="Envoyer un email"
       >
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
@@ -28,7 +28,7 @@ export default function ContactIcons({ email, linkedin, className = '' }: Contac
         href={linkedinHref}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-9 h-9 rounded-full border-2 border-[#4d6263]/40 text-[#4d6263] hover:border-[#E5493D] hover:text-[#E5493D] hover:bg-[#E5493D]/5 transition-all duration-300"
+        className="flex items-center justify-center w-9 h-9 rounded-full border border-[#4d6263]/40 text-[#4d6263] hover:border-[#E5493D] hover:text-[#E5493D] hover:bg-[#E5493D]/5 transition-all duration-300"
         aria-label="LinkedIn"
       >
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/logo-adm.jpg"
+                src="/logo-adm-bg.png"
                 alt="ADM Avocats du Molinel"
                 width={180}
                 height={62}

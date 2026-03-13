@@ -53,7 +53,7 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
 
-  const navBg = 'bg-white shadow-sm shadow-[#313E35]/10'
+  const navBg = 'bg-white/95 backdrop-blur-sm border-b border-[#313E35]/5'
   const linkClass = 'text-[#313E35]/90 hover:text-[#E5493D]'
   const burgerColor = 'bg-[#313E35]'
 

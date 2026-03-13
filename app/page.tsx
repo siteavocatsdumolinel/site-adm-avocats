@@ -103,7 +103,7 @@ export default function HomePage() {
               <FadeInSection key={c.label} delay={i * 0.06} subtleScale>
                 <Link
                   href={c.href}
-                  className="group relative flex flex-col items-center text-center bg-white rounded-xl p-6 md:p-8 h-full border border-[#313E35]/5 shadow-sm hover:shadow-lg hover:shadow-[0_8px_24px_rgba(49,62,53,0.08)] hover:border-[#313E35]/10 hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden"
+                  className="group relative flex flex-col items-center text-center bg-white rounded-xl p-6 md:p-8 h-full border border-[#313E35]/5 shadow-sm hover:shadow-md hover:border-[#313E35]/15 hover:-translate-y-1 transition-all duration-300 ease-out overflow-hidden"
                 >
                   <span
                     aria-hidden="true"
@@ -185,14 +185,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
               <Link
                 href="/informations-et-contact#contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E5493D] text-white text-sm font-semibold tracking-wider uppercase rounded-sm hover:bg-[#c73d32] hover:shadow-lg hover:shadow-[#E5493D]/25 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E5493D] text-white text-sm font-semibold tracking-wider uppercase rounded-full hover:bg-[#c73d32] hover:shadow-md hover:shadow-[#E5493D]/25 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
               >
                 Nous contacter
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
               <a
                 href="tel:0320121060"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white/90 text-sm font-medium tracking-wide hover:border-white/60 hover:bg-white/5 transition-all duration-300 rounded-sm w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white/90 text-sm font-medium tracking-wide hover:border-white/60 hover:bg-white/5 transition-all duration-300 rounded-full w-full sm:w-auto"
               >
                 <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 03 20 12 10 60
