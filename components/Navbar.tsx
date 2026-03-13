@@ -60,7 +60,7 @@ export default function Navbar() {
   return (
     <nav
       ref={dropdownRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${navBg}`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -128,7 +128,7 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`lg:hidden fixed inset-0 top-16 bg-white z-40 transition-all duration-300 overflow-y-auto ${
+        className={`lg:hidden fixed inset-0 top-16 bg-white z-[110] transition-all duration-300 overflow-y-auto ${
           mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
