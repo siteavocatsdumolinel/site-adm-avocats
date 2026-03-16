@@ -42,7 +42,7 @@ export default function HeroSection() {
   }, [images.length])
 
   return (
-    <section className="relative z-0 min-h-[88vh] flex items-center justify-center overflow-hidden bg-[#313E35] pt-20">
+    <section className="relative z-0 min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#313E35] pt-20">
       {/* Carrousel d'images en arrière-plan */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -90,7 +90,7 @@ export default function HeroSection() {
       />
 
       {/* Contenu au premier plan */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-28 pb-16 sm:pb-20 md:pb-24 flex flex-col justify-between gap-12 min-h-[70vh]">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-12 sm:pb-16 md:pb-20 flex flex-col justify-between gap-12 min-h-[60vh]">
         {/* Halo dégradé derrière le titre */}
         <motion.div
           aria-hidden="true"
