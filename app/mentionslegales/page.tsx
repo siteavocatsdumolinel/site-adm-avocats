@@ -56,13 +56,11 @@ export default function MentionsLegalesPage() {
 
           <Section title="Hébergement">
             <p>
-              Ce site est hébergé par Amen SASU, immatriculée à Paris sous le numéro 421 527 797 000 11, dont le siège social est 12-14, Rond Point des Champs Elysées 75008 Paris.
+            Vercel Inc. – 340 S Lemon Ave #4133, Walnut, CA 91789, USA
+         
             </p>
             <p>
-              Coordonnées téléphoniques : 0811 88 77 66
-            </p>
-            <p>
-              E-mail : via la rubrique « Contactez-nous » du site Amen.
+            Site : vercel.com – Privacy : vercel.com/legal/privacy-policy
             </p>
           </Section>
 
@@ -80,7 +78,7 @@ export default function MentionsLegalesPage() {
           </Section>
 
           <Section title="Réalisations">
-            <p>Chupin Philippe</p>
+            <p>Pierre Aboucaya EI - Orchesia</p>
           </Section>
 
           <Section title="Collecte et utilisation des données à caractère personnel">

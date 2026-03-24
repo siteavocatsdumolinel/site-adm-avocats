@@ -1,14 +1,16 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Lora, Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CookieConsentBanner from '@/components/CookieConsentBanner'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 
-const playfair = Playfair_Display({
+// On garde le même nom de variable CSS (---font-playfair) pour éviter de modifier toutes les pages.
+const lora = Lora({
   subsets: ['latin'],
   variable: '--font-playfair',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
@@ -33,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="fr" className={`${lora.variable} ${inter.variable}`}>
       <body>
         <GoogleAnalytics />
         <Navbar />

@@ -53,36 +53,34 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
 
-  const navBg = 'bg-white border-b border-[#313E35]/5'
-  const linkClass = 'text-[#313E35]/90 hover:text-[#E5493D]'
-  const burgerColor = 'bg-[#313E35]'
-
   return (
     <nav
       ref={dropdownRef}
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${navBg}`}
+      className="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-[#313E35]/8 transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center gap-3 group" aria-label="ADM Avocats du Molinel - Accueil">
+        <div className="grid grid-cols-3 items-center h-16 lg:h-20">
+
+          {/* Logo — gauche */}
+          <Link href="/" className="flex items-center" aria-label="ADM Avocats du Molinel - Accueil">
             <Image
-              src="/logo-adm.jpg"
+              src="/images/logo_adm.png"
               alt="ADM Avocats du Molinel"
               width={140}
               height={48}
-              className="h-16 w-auto object-contain object-left"
+              className="h-14 w-auto object-contain object-left"
               priority
             />
           </Link>
 
-          <div className="hidden lg:flex items-center gap-1">
+          {/* Navigation — centre */}
+          <div className="hidden lg:flex items-center justify-center gap-0">
             <DropdownItem
               label="Compétences"
               href="/competences"
               isOpen={openDropdown === 'competences'}
               onToggle={() => setOpenDropdown(openDropdown === 'competences' ? null : 'competences')}
               links={competencesLinks}
-              linkClass={linkClass}
             />
             <DropdownItem
               label="Équipe"
@@ -90,7 +88,6 @@ export default function Navbar() {
               isOpen={openDropdown === 'equipe'}
               onToggle={() => setOpenDropdown(openDropdown === 'equipe' ? null : 'equipe')}
               links={equipeLinks}
-              linkClass={linkClass}
             />
             <DropdownItem
               label="Infos & Contact"
@@ -98,35 +95,44 @@ export default function Navbar() {
               isOpen={openDropdown === 'contact'}
               onToggle={() => setOpenDropdown(openDropdown === 'contact' ? null : 'contact')}
               links={contactLinks}
-              linkClass={linkClass}
             />
             <Link
               href="/le-blog"
-              className={`px-4 py-2 text-sm tracking-wide transition-colors duration-200 ${linkClass}`}
+              className="relative group px-4 py-2 text-sm font-medium tracking-wide text-[#313E35]/80 hover:text-[#E5493D] transition-colors duration-200"
               onClick={() => setOpenDropdown(null)}
             >
               Blog
+              <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-[#E5493D] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left rounded-full" />
             </Link>
+          </div>
+
+          {/* Téléphone — droite */}
+          <div className="hidden lg:flex items-center justify-end">
             <a
               href="tel:0320121060"
-              className="ml-4 px-5 py-2 bg-[#E5493D] text-white text-sm tracking-wider hover:bg-[#c73d32] transition-colors duration-300"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E5493D] text-white text-sm font-semibold tracking-wider rounded-full hover:bg-[#c73d32] hover:shadow-md hover:shadow-[#E5493D]/25 hover:-translate-y-0.5 transition-all duration-300"
             >
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
               03 20 12 10 60
             </a>
           </div>
 
+          {/* Burger mobile */}
           <button
-            className="lg:hidden flex flex-col justify-center gap-[5px] w-8 h-8 p-1"
+            className="lg:hidden col-start-3 flex flex-col justify-center items-end gap-[5px] w-8 h-8 ml-auto p-1"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
-            <span className={`block w-full h-[1.5px] ${burgerColor} transition-all duration-300 origin-center ${mobileOpen ? 'rotate-45 translate-y-[6.5px]' : ''}`} />
-            <span className={`block w-full h-[1.5px] ${burgerColor} transition-all duration-300 ${mobileOpen ? 'opacity-0 scale-x-0' : ''}`} />
-            <span className={`block w-full h-[1.5px] ${burgerColor} transition-all duration-300 origin-center ${mobileOpen ? '-rotate-45 -translate-y-[6.5px]' : ''}`} />
+            <span className={`block w-full h-[1.5px] bg-[#313E35] transition-all duration-300 origin-center ${mobileOpen ? 'rotate-45 translate-y-[6.5px]' : ''}`} />
+            <span className={`block w-full h-[1.5px] bg-[#313E35] transition-all duration-300 ${mobileOpen ? 'opacity-0 scale-x-0' : ''}`} />
+            <span className={`block w-full h-[1.5px] bg-[#313E35] transition-all duration-300 origin-center ${mobileOpen ? '-rotate-45 -translate-y-[6.5px]' : ''}`} />
           </button>
         </div>
       </div>
 
+      {/* Menu mobile */}
       <div
         className={`lg:hidden fixed inset-0 top-16 bg-white z-[110] transition-all duration-300 overflow-y-auto ${
           mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -140,7 +146,14 @@ export default function Navbar() {
             Blog
           </Link>
           <div className="pt-6">
-            <a href="tel:0320121060" className="block text-center py-3 bg-[#E5493D] text-white tracking-wider hover:bg-[#c73d32] transition-colors" onClick={() => setMobileOpen(false)}>
+            <a
+              href="tel:0320121060"
+              className="flex items-center justify-center gap-2 py-3 bg-[#E5493D] text-white tracking-wider rounded-full hover:bg-[#c73d32] transition-colors"
+              onClick={() => setMobileOpen(false)}
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
               03 20 12 10 60
             </a>
           </div>
@@ -156,42 +169,41 @@ interface DropdownItemProps {
   isOpen: boolean
   onToggle: () => void
   links: { label: string; href: string }[]
-  linkClass: string
 }
 
-function DropdownItem({ label, href, isOpen, onToggle, links, linkClass }: DropdownItemProps) {
+function DropdownItem({ label, href, isOpen, onToggle, links }: DropdownItemProps) {
   return (
-    <div className="relative">
-      <button
-        className={`flex items-center gap-1.5 px-4 py-2 text-sm tracking-wide transition-colors duration-200 ${linkClass}`}
-        onClick={onToggle}
-      >
-        {label}
-        <svg className={`w-3 h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="absolute top-full left-0 mt-1 w-56 bg-white border border-[#313E35]/10 shadow-lg py-1 rounded-md overflow-hidden"
+    <div className="relative group/dropdown">
+      {/* Trigger */}
+      <div className="relative flex items-center text-sm font-medium tracking-wide text-[#313E35]/80 group-hover/dropdown:text-[#E5493D] transition-colors duration-200">
+        <Link href={href} className="pl-4 pr-1 py-2 whitespace-nowrap">
+          {label}
+        </Link>
+        <span className="pr-4 py-2 cursor-default">
+          <svg
+            className="w-3 h-3 transition-transform duration-200 group-hover/dropdown:rotate-180"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
           >
-            <Link href={href} className="block px-4 py-2.5 text-sm text-[#E5493D] hover:bg-[#f8f9f9] transition-colors duration-200 border-b border-[#313E35]/5 mb-1" onClick={onToggle}>
-              Voir tout
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </span>
+        {/* Soulignement */}
+        <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-[#E5493D] rounded-full scale-x-0 group-hover/dropdown:scale-x-100 transition-transform duration-200 origin-left" />
+      </div>
+
+      {/* Dropdown — s'ouvre au hover via CSS, pont invisible pour ne pas perdre le focus */}
+      <div className="absolute top-full left-0 pt-2 opacity-0 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:pointer-events-auto transition-opacity duration-150">
+        <div className="w-56 bg-white border border-[#313E35]/10 shadow-xl shadow-[#313E35]/8 py-2 rounded-xl overflow-hidden">
+          <Link href={href} className="block px-4 py-2.5 text-sm text-[#E5493D] font-medium hover:bg-[#f8f9f9] transition-colors duration-150 border-b border-[#313E35]/5 mb-1">
+            Voir tout →
+          </Link>
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} className="block px-4 py-2.5 text-sm text-[#4d6263] hover:text-[#313E35] hover:bg-[#f8f9f9] transition-colors duration-150">
+              {link.label}
             </Link>
-            {links.map((link) => (
-              <Link key={link.href} href={link.href} className="block px-4 py-2.5 text-sm text-[#4d6263] hover:text-[#313E35] hover:bg-[#f8f9f9] transition-colors duration-200" onClick={onToggle}>
-                {link.label}
-              </Link>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

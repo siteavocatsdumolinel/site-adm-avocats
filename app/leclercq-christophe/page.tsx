@@ -11,8 +11,10 @@ export default function ChristopheLeclercqPage() {
     <LawyerProfile
       name="Christophe LECLERCQ"
       title="Avocat au Barreau de LILLE"
-      photo="https://adm-avocatsdumolinel.com/wp-content/uploads/2025/04/1738697163256-1.jpg"
-      biography="Titulaire d'un master 2 en droit social et gestion des ressources humaines, Christophe LECLERCQ dispose de plusieurs expériences en entreprise en gestion des ressources humaines et en tant que juriste droit social. Il a prêté serment le 22 novembre 2021 et a rejoint le cabinet la même année. Il intervient en accompagnement juridique et contentieux, dans tous les aspects du droit social, et plus particulièrement sur les relations individuelles et collectives de travail."
+      photo="/images/equipe/christophe-leclerq.jpg"
+      biography={`Titulaire d'un master 2 en droit social et gestion des ressources humaines, Christophe LECLERCQ dispose de plusieurs expériences en entreprise en gestion des ressources humaines et en tant que juriste droit social. Il a prêté serment le 22 novembre 2021 et a rejoint le cabinet la même année.
+
+Il intervient en accompagnement juridique et contentieux, dans tous les aspects du droit social, et plus particulièrement sur les relations individuelles et collectives de travail.`}
       competences={[
         { label: 'Droit social', href: '/competences#droit-social' },
       ]}

@@ -39,6 +39,14 @@ body {
   color: #ffffff;
 }
 
+/* Les titres sont souvent en `font-light` : on les rend un peu plus "épais". */
+h1.font-light,
+h2.font-light,
+h3.font-light,
+h4.font-light {
+  font-weight: 500;
+}
+
 .section-padding {
   padding-top: 5rem;
   padding-bottom: 5rem;

@@ -6,16 +6,16 @@ import Link from 'next/link'
 
 // Images du carrousel : mettez vos images dans public/images/ et utilisez '/images/hero-1.jpg' etc.
 const CAROUSEL_IMAGES = [
-  '/images/hero-1.jpg',
-  '/images/hero-2.jpg',
-  '/images/hero-3.jpg',
+  '/images/hero/hero-1.jfif',
+  '/images/hero/hero-2.jfif',
+  '/images/hero/hero-3.jfif',
 ]
 
 // Images de démo (justice / cabinet) si public/images/ est vide
 const DEMO_IMAGES = [
-  'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80',
-  'https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=1920&q=80',
-  'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80',
+  '/images/hero/hero-1.jfif',
+  '/images/hero/hero-2.jfif',
+  '/images/hero/hero-3.jfif',
 ]
 
 export default function HeroSection() {
@@ -90,7 +90,7 @@ export default function HeroSection() {
       />
 
       {/* Contenu au premier plan */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-12 sm:pb-16 md:pb-20 flex flex-col justify-between gap-12 min-h-[60vh]">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-10 sm:pb-12 flex flex-col justify-between gap-12 min-h-[80vh]">
         {/* Halo dégradé derrière le titre */}
         <motion.div
           aria-hidden="true"
@@ -154,28 +154,27 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Découvrir */}
-        <div className="flex flex-col items-center justify-center gap-6">
+        {/* Barre bas : Depuis 2006 | Découvrir | Wasquehal */}
+        <div className="flex items-center justify-between w-full">
+          <span className="text-white/60 text-[10px] tracking-[0.2em] uppercase">Depuis 2006</span>
+
           <motion.button
             type="button"
             onClick={handleDiscoverClick}
-            className="flex flex-col items-center gap-3 text-white hover:text-[#E5493D] transition-colors duration-300 group"
+            className="flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors duration-300 group"
             aria-label="Voir la suite"
-            animate={{ y: [0, -6, 0] }}
+            animate={{ y: [0, -5, 0] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <span className="text-xs font-medium tracking-[0.3em] uppercase">Découvrir</span>
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-white/60 group-hover:border-[#E5493D] group-hover:bg-white/5 transition-all duration-300">
-              <svg className="h-4 w-4 translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <span className="text-[10px] font-medium tracking-[0.3em] uppercase">Découvrir</span>
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/50 group-hover:border-white bg-black/20 backdrop-blur-sm transition-all duration-300">
+              <svg className="h-3.5 w-3.5 translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </span>
           </motion.button>
 
-          <div className="flex items-center justify-between w-full max-w-7xl mx-auto text-white/60 text-[10px] tracking-[0.2em] uppercase">
-            <span>Depuis 2006</span>
-            <span>Wasquehal</span>
-          </div>
+          <span className="text-white/60 text-[10px] tracking-[0.2em] uppercase">Wasquehal</span>
         </div>
       </div>
     </section>

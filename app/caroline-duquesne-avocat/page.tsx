@@ -11,8 +11,20 @@ export default function CarolineDuquesnePage() {
     <LawyerProfile
       name="Caroline DUQUESNE"
       title="Avocat au Barreau de LILLE"
-      photo="https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/caroline-duquesne-.jpg"
-      biography="Forte d'une solide expérience, Caroline DUQUESNE accompagne en droit social les entreprises de toute taille. Sa bonne connaissance de l'entreprise et de son fonctionnement lui permet de définir, avec ses interlocuteurs, une stratégie globale. Soucieuse d'être une aide à la décision, elle gère plus particulièrement les aspects stratégiques des projets en intégrant l'analyse et la gestion des risques. Elle accompagne les entreprises dans leurs réorganisations (fusion-acquisition, croissance externe…), et dans la gestion de leurs éventuelles difficultés économiques. Elle est aux côtés du chef d'entreprise dans ses négociations avec les partenaires sociaux. Son expérience du contentieux l'a amenée à s'intéresser aux MARD (Modes alternatifs de résolution des différends). Elle souhaite privilégier les accords aux procès longs, coûteux et aléatoires. Elle s'est donc formée et a obtenu le diplôme de Médiateur en 2020 (ICP). Elle anime une équipe composée de deux avocats."
+      photo="/images/equipe/caroline-duquesne-.jpg"
+      biography={`Forte d'une solide expérience, Caroline DUQUESNE accompagne en droit social les entreprises de toute taille.
+
+Sa bonne connaissance de l'entreprise et de son fonctionnement lui permet de définir, avec ses interlocuteurs, une stratégie globale.
+
+Soucieuse d'être une aide à la décision, elle gère plus particulièrement les aspects stratégiques des projets en intégrant l'analyse et la gestion des risques.
+
+Elle accompagne les entreprises dans leurs réorganisations (fusion-acquisition, croissance externe…), et dans la gestion de leurs éventuelles difficultés économiques.
+
+Elle est aux côtés du chef d'entreprise dans ses négociations avec les partenaires sociaux.
+
+Son expérience du contentieux l'a amenée à s'intéresser aux MARD (Modes alternatifs de résolution des différends). Elle souhaite privilégier les accords aux procès longs, coûteux et aléatoires. Elle s'est donc formée et a obtenu le diplôme de Médiateur en 2020 (ICP).
+
+Elle anime une équipe composée de deux avocats.`}
       engagements={[
         'Membre du Centre des Jeunes Dirigeants',
         'Membre du syndicat AVOSIAL',

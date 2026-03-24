@@ -11,13 +11,13 @@ export const metadata: Metadata = {
 }
 
 const lawyers = [
-  { name: 'Frank BECKELYNCK', title: 'Avocat spécialiste en droit pénal / Avocat en droit civil et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/rd-frank-beckelink--232x232.jpg', href: '/frank-beckelynck-avocat' },
-  { name: 'Caroline DUQUESNE', title: 'Avocat en droit social', tags: ['Droit social'], photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/rd-caroline-duquesne--232x232.jpg', href: '/caroline-duquesne-avocat' },
-  { name: 'Eric GARDIN', title: 'Avocat fiscaliste', tags: ['Droit fiscal'], photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2025/04/circle-bw-eric-232x232.png', href: '/eric-gardin' },
-  { name: 'Raphaël THOMAS', title: 'Avocat en droit pénal et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/rd-raphael-thomas-232x232.jpg', href: '/raphael-thomas-avocat' },
-  { name: 'Charlotte LEFEBVRE', title: 'Avocat en droit social — Associée', tags: ['Droit social'], photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2026/02/rd-charlotte-lefebvre-232x232.png', href: '/charlotte-lefebvre-avocat' },
-  { name: 'Claire FRYS', title: 'Avocat en droit social', tags: ['Droit social'], photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/rd-claire-frys--232x232.jpg', href: '/claire-frys-avocat' },
-  { name: 'Christophe LECLERCQ', title: 'Avocat en droit social', tags: ['Droit social'], photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2025/04/Cleclercq-bw-232x232.png', href: '/leclercq-christophe' },
+  { name: 'Frank BECKELYNCK', title: 'Avocat spécialiste en droit pénal / Avocat en droit civil et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat' },
+  { name: 'Caroline DUQUESNE', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/caroline-duquesne-.jpg', href: '/caroline-duquesne-avocat' },
+  { name: 'Eric GARDIN', title: 'Avocat fiscaliste', tags: ['Droit fiscal'], photo: '/images/equipe/eric-gardin.png', href: '/eric-gardin' },
+  { name: 'Raphaël THOMAS', title: 'Avocat en droit pénal et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat' },
+  { name: 'Charlotte LEFEBVRE', title: 'Avocat en droit social — Associée', tags: ['Droit social'], photo: '/images/equipe/charlotte-lefebvre.png', href: '/charlotte-lefebvre-avocat' },
+  { name: 'Claire FRYS', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/claire-frys.jpg', href: '/claire-frys-avocat' },
+  { name: 'Christophe LECLERCQ', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/christophe-leclerq.jpg', href: '/leclercq-christophe' },
 ]
 
 const competences = [
@@ -37,38 +37,63 @@ export default function HomePage() {
       <section id="presentation" className="relative bg-white pt-20 pb-24 md:pt-28 md:pb-32 rounded-t-2xl shadow-[0_-4px_24px_rgba(49,62,53,0.06)]">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <FadeInSection subtleScale>
-            <div className="text-center mb-16 md:mb-20">
-              <h2 className="text-[#313E35] text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-[0.12em] leading-tight mb-6 md:mb-8">
-                Cabinet d'avocats pluridisciplinaire en droit des affaires.
+            <div className="text-center mb-12 md:mb-14">
+              <h2
+                className="text-[#313E35] text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-5 md:mb-6"
+                style={{ fontFamily: 'var(--font-playfair)' }}
+              >
+                Cabinet d'avocats pluridisciplinaire<br className="hidden sm:block" /> en droit des affaires.
               </h2>
-              <p className="text-[#4d6263] text-base md:text-lg leading-relaxed text-[#313E35]/90 max-w-2xl mx-auto">
+              <p className="text-[#4d6263] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                 Depuis 2006, les Avocats du Molinel accompagnent avec réactivité et rigueur l'ensemble des opérateurs économiques à chaque étape de leurs projets et proposent des prestations juridiques personnalisées, constructives et stratégiques.
               </p>
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-14 place-items-center">
+          <div className="mb-12 md:mb-14" />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 md:divide-x divide-[#313E35]/10">
             {[
               { title: 'Notre activité', items: ['Conseil et assistance', 'Défense et contentieux', 'Accompagnement et formation'], iconKey: 'activite' as const },
               { title: 'Nos qualités', items: ['Pragmatisme', 'Engagement', 'Exigence'], iconKey: 'qualites' as const },
               { title: 'Nos valeurs', items: ['Disponibilité', 'Confiance', 'Sécurité'], iconKey: 'valeurs' as const },
             ].map((col, i) => (
-              <FadeInSection key={col.title} delay={i * 0.08}>
-                <div className="flex flex-col items-center text-center w-full max-w-xs">
-                  <div className="w-12 h-12 rounded-full bg-[#313E35] flex items-center justify-center mb-4 text-white [&_svg]:w-6 [&_svg]:h-6 shrink-0">
-                    {getDepartmentIcon(col.iconKey)}
+              <FadeInSection key={col.title} delay={i * 0.1}>
+                <div
+                  className={[
+                    'flex flex-col py-10 md:py-0 md:px-10 lg:px-14',
+                    i === 0 ? 'md:!pl-0 border-b md:border-b-0' : '',
+                    i === 1 ? 'border-b md:border-b-0' : '',
+                    i === 2 ? 'md:!pr-0' : '',
+                  ].filter(Boolean).join(' ')}
+                >
+                  {/* Numéro éditorial */}
+                  <span
+                    aria-hidden="true"
+                    className="block font-bold leading-none mb-3 select-none text-[#313E35]/[0.07] tabular-nums"
+                    style={{ fontFamily: 'var(--font-playfair)', fontSize: 'clamp(3rem, 5vw, 4.5rem)' }}
+                  >
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+
+                  {/* Icône + titre */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-8 h-8 rounded-full bg-[#313E35] flex items-center justify-center text-white [&_svg]:w-[1.1rem] [&_svg]:h-[1.1rem] shrink-0">
+                      {getDepartmentIcon(col.iconKey)}
+                    </div>
+                    <p className="text-[#E5493D] text-sm font-semibold italic tracking-[0.15em] uppercase">
+                      {col.title}
+                    </p>
                   </div>
-                  <p className="text-[#E5493D] text-sm font-medium italic mb-6 tracking-wide">
-                    {col.title}
-                  </p>
-                  <ul className="w-full space-y-0">
-                    {col.items.map((item, idx) => (
+
+                  {/* Liste */}
+                  <ul className="border-t border-[#313E35]/10">
+                    {col.items.map((item) => (
                       <li
                         key={item}
-                        className={`py-3.5 text-[#313E35] text-xs font-semibold tracking-[0.14em] uppercase ${
-                          idx < col.items.length - 1 ? 'border-b border-[#E5493D]/35' : ''
-                        }`}
+                        className="flex items-center gap-3 py-3.5 border-b border-[#313E35]/10 text-[#313E35] text-base font-medium"
                       >
+                        <span aria-hidden="true" className="w-1 h-1 rounded-full bg-[#E5493D] shrink-0" />
                         {item}
                       </li>
                     ))}
@@ -121,7 +146,7 @@ export default function HomePage() {
                   <p className="text-[#4d6263] text-sm leading-relaxed">
                     {c.desc}
                   </p>
-                  <span className="inline-flex items-center gap-2 mt-6 text-[#E5493D] text-xs font-medium tracking-wider uppercase opacity-80 group-hover:opacity-100 transition-opacity">
+                  <span className="inline-flex items-center gap-2 mt-auto pt-6 text-[#E5493D] text-xs font-medium tracking-wider uppercase opacity-80 group-hover:opacity-100 transition-opacity">
                     En savoir plus
                     <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -177,7 +202,7 @@ export default function HomePage() {
               className="text-white text-3xl md:text-4xl lg:text-[2.5rem] font-semibold mb-6 leading-tight"
               style={{ fontFamily: 'var(--font-playfair)' }}
             >
-              Vous avez un projet ou une question ?
+              Vous avez une question ?
             </h2>
             <p className="text-white/70 text-base md:text-lg mb-12 max-w-xl mx-auto leading-relaxed">
               Notre équipe se tient disponible pour vous accompagner dans vos démarches juridiques.

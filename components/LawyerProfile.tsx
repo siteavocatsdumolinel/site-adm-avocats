@@ -52,7 +52,7 @@ export default function LawyerProfile({
   return (
     <div className="bg-white">
       {/* Header compact */}
-      <div className="bg-[#f8f9f9] pt-24 pb-4">
+      <div className="bg-[#f8f9f9] pt-28 pb-8">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <FadeInSection>
             <Link
@@ -69,12 +69,12 @@ export default function LawyerProfile({
       </div>
 
       {/* Contenu compact — tient sur une page */}
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-6 lg:py-8">
-        <div className="grid lg:grid-cols-[200px_1fr] gap-8 lg:gap-10">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
+        <div className="grid lg:grid-cols-[240px_1fr] gap-8 lg:gap-10">
           {/* Colonne gauche — photo réduite */}
           <FadeInSection>
             <div>
-              <div className="w-[200px] h-[240px] overflow-hidden bg-[#f2f2f2] flex-shrink-0 mx-auto lg:mx-0">
+              <div className="w-[240px] h-[290px] overflow-hidden bg-[#f2f2f2] flex-shrink-0 mx-auto lg:mx-0">
                 <img
                   src={photo}
                   alt={name}

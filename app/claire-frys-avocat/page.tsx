@@ -11,8 +11,10 @@ export default function ClaireFrysPage() {
     <LawyerProfile
       name="Claire FRYS"
       title="Avocat au Barreau de LILLE"
-      photo="https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/claire-frys.jpg"
-      biography="Titulaire d'un Master en droit social et gestion des ressources humaines, Claire FRYS a prêté serment en 2013, et a rejoint le cabinet ADM la même année. Elle intervient en accompagnement juridique et contentieux, dans tous les aspects du droit social, et plus particulièrement sur les relations individuelles du travail."
+      photo="/images/equipe/claire-frys.jpg"
+      biography={`Titulaire d'un Master en droit social et gestion des ressources humaines, Claire FRYS a prêté serment en 2013, et a rejoint le cabinet ADM la même année.
+
+Elle intervient en accompagnement juridique et contentieux, dans tous les aspects du droit social, et plus particulièrement sur les relations individuelles du travail.`}
       langue="Anglais"
       competences={[
         { label: 'Droit social', href: '/competences#droit-social' },
