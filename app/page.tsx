@@ -11,13 +11,13 @@ export const metadata: Metadata = {
 }
 
 const lawyers = [
-  { name: 'Frank BECKELYNCK', title: 'Avocat spécialiste en droit pénal / Avocat en droit civil et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat' },
-  { name: 'Caroline DUQUESNE', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/caroline-duquesne-.jpg', href: '/caroline-duquesne-avocat' },
-  { name: 'Eric GARDIN', title: 'Avocat fiscaliste', tags: ['Droit fiscal'], photo: '/images/equipe/eric-gardin.png', href: '/eric-gardin' },
-  { name: 'Raphaël THOMAS', title: 'Avocat en droit pénal et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat' },
-  { name: 'Charlotte LEFEBVRE', title: 'Avocat en droit social — Associée', tags: ['Droit social'], photo: '/images/equipe/charlotte-lefebvre.png', href: '/charlotte-lefebvre-avocat' },
-  { name: 'Claire FRYS', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/claire-frys.jpg', href: '/claire-frys-avocat' },
-  { name: 'Christophe LECLERCQ', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/christophe-leclerq.jpg', href: '/leclercq-christophe' },
+  { name: 'Frank BECKELYNCK', title: 'Avocat spécialiste en droit pénal / Avocat en droit civil et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat', email: 'fbeckelynck@admavocats.fr', linkedin: 'https://www.linkedin.com/in/frank-beckelynck-45a51316/' },
+  { name: 'Caroline DUQUESNE', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/caroline-duquesne-.jpg', href: '/caroline-duquesne-avocat', email: 'cduquesne@admavocats.fr', linkedin: 'https://www.linkedin.com/in/caroline-duquesne-5069aa39/' },
+  { name: 'Eric GARDIN', title: 'Avocat fiscaliste', tags: ['Droit fiscal'], photo: '/images/equipe/eric-gardin.png', href: '/eric-gardin', email: 'gardin.avocat@gmail.com', linkedin: 'https://www.linkedin.com/in/eric-gardin-070174337/' },
+  { name: 'Raphaël THOMAS', title: 'Avocat en droit pénal et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat', email: 'rthomas@admavocats.fr', linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-thomas-6a8666154/' },
+  { name: 'Charlotte LEFEBVRE', title: 'Avocat en droit social — Associée', tags: ['Droit social'], photo: '/images/equipe/charlotte-lefebvre.png', href: '/charlotte-lefebvre-avocat', email: 'clefebvre@admavocats.fr', linkedin: 'https://www.linkedin.com/in/charlotte-lefebvre-1668b1143/' },
+  { name: 'Claire FRYS', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/claire-frys.jpg', href: '/claire-frys-avocat', email: 'cfrys@admavocats.fr', linkedin: 'https://www.linkedin.com/in/claire-frys-5a883810b/' },
+  { name: 'Christophe LECLERCQ', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/christophe-leclerq.jpg', href: '/leclercq-christophe', email: 'cleclercq@admavocats.fr', linkedin: 'https://www.linkedin.com/in/christophe-leclercq-b6a265101/' },
 ]
 
 const competences = [

@@ -17,6 +17,8 @@ interface LawyerProfileProps {
   langue?: string
   competences: Competence[]
   phone: string
+  email?: string
+  linkedin?: string
 }
 
 export default function LawyerProfile({
@@ -29,6 +31,8 @@ export default function LawyerProfile({
   langue,
   competences,
   phone,
+  email,
+  linkedin,
 }: LawyerProfileProps) {
   // Paragraphes : retours à la ligne explicites, ou découpage intelligent par phrases
   const bioParagraphs = (() => {
@@ -108,7 +112,18 @@ export default function LawyerProfile({
                 {phone}
               </a>
               <div className="flex justify-start mt-3">
-                <ContactIcons />
+                <ContactIcons email={email} linkedin={linkedin} />
+              </div>
+              <div className="mt-4">
+                <Link
+                  href="/informations-et-contact#contact"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E5493D] text-white text-xs font-semibold tracking-wider uppercase rounded-full hover:bg-[#c73d32] transition-colors duration-300"
+                >
+                  Prendre contact
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </FadeInSection>
@@ -155,18 +170,6 @@ export default function LawyerProfile({
                   </ul>
                 </div>
               )}
-
-              <div className="mt-6 pt-6 border-t border-[#E5493D]/30">
-                <Link
-                  href="/informations-et-contact#contact"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E5493D] text-white text-xs font-semibold tracking-wider uppercase hover:bg-[#c73d32] transition-colors duration-300"
-                >
-                  Prendre contact
-                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </div>
             </div>
           </FadeInSection>
         </div>

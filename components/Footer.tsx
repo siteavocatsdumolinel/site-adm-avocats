@@ -74,7 +74,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-white/30 text-xs tracking-wide">
-            © ADM 2018 – 2026. Tous droits réservés.
+            © ADM 2026. Tous droits réservés.
           </p>
           <div className="flex items-center justify-center sm:justify-end gap-6 text-xs">
             <Link href="/mentionslegales" className="text-white/30 hover:text-white/60 transition-colors duration-200">

@@ -26,6 +26,8 @@ Charlotte LEFEBVRE est aujourd'hui redevenue Avocat et a rejoint le cabinet ADM 
         { label: 'Droit social', href: '/competences#droit-social' },
       ]}
       phone="03 20 12 10 60"
+      email="clefebvre@admavocats.fr"
+      linkedin="https://www.linkedin.com/in/charlotte-lefebvre-1668b1143/"
     />
   )
 }

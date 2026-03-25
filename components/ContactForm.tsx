@@ -15,9 +15,20 @@ export default function ContactForm() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+        name: form.nom,
+        email: form.email,
+        subject: form.sujet || 'Nouveau message depuis le site ADM Avocats',
+        message: form.message,
+      }),
+    })
+    if (res.ok) setSubmitted(true)
   }
 
   if (submitted) {

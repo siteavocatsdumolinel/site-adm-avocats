@@ -37,6 +37,9 @@ Elle anime une équipe composée de deux avocats.`}
         { label: 'Droit social', href: '/competences#droit-social' },
       ]}
       phone="03 20 12 10 60"
+      email="cduquesne@admavocats.fr"
+      linkedin="https://www.linkedin.com/in/caroline-duquesne-5069aa39/"
+  
     />
   )
 }

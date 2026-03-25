@@ -20,6 +20,8 @@ Elle intervient en accompagnement juridique et contentieux, dans tous les aspect
         { label: 'Droit social', href: '/competences#droit-social' },
       ]}
       phone="03 20 12 10 60"
+      email="cfrys@admavocats.fr"
+      linkedin="https://www.linkedin.com/in/claire-frys-5a883810b/"
     />
   )
 }

@@ -19,6 +19,8 @@ Il intervient en accompagnement juridique et contentieux, dans tous les aspects 
         { label: 'Droit social', href: '/competences#droit-social' },
       ]}
       phone="03 20 12 10 60"
+      email="cleclercq@admavocats.fr"
+      linkedin="https://www.linkedin.com/in/christophe-leclercq-b6a265101/"
     />
   )
 }

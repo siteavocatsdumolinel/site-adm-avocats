@@ -25,6 +25,8 @@ Spécialiste en droit pénal dès 1997, et particulièrement en droit pénal des
         { label: 'Droit pénal', href: '/competences#droit-penal' },
       ]}
       phone="03 20 12 10 60"
+      email="fbeckelynck@admavocats.fr"
+      linkedin="https://www.linkedin.com/in/frank-beckelynck-45a51316/"
     />
   )
 }

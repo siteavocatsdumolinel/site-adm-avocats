@@ -137,10 +137,7 @@ export default function PolitiqueConfidentialitePage() {
               <li>Un droit à la portabilité de ses données. L'utilisateur dispose du droit de recevoir les données à caractère personnel qu'il a communiqué à ADM AVOCATS. Il peut également lui demander de transmettre ces données à un autre responsable de traitement.</li>
             </ul>
             <p>
-              Pour exercer ce droit, l'utilisateur pourra adresser sa demande accompagnée d'un justificatif d'identité par e-mail à l'adresse suivante : <a href="mailto:thomaskleparski@avocatline.fr" className="text-[#E5493D] hover:underline">thomaskleparski@avocatline.fr</a>.
-            </p>
-            <p>
-              En cas de violation de ses données personnelles, l'utilisateur en sera tenu informé dans les plus brefs délais. L'utilisateur a toujours la possibilité de saisir l'autorité de contrôle compétente, en France, la CNIL.
+              Pour exercer ce droit, l'utilisateur pourra adresser sa demande accompagnée d'un justificatif d'identité par e-mail à l'adresse suivante : <a href="mailto:fbeckelynck@admavocats.fr" className="text-[#E5493D] hover:underline">fbeckelynck@admavocats.fr</a>.
             </p>
           </Section>
 

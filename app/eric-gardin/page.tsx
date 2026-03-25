@@ -24,6 +24,8 @@ Passionné par la transmission du savoir, il fonde en 1997 le Mastère de Gestio
         { label: 'Droit douanier', href: '/competences#droit-fiscal' },
       ]}
       phone="06 28 49 29 33"
+      email="gardin.avocat@gmail.com"
+      linkedin="https://www.linkedin.com/in/eric-gardin-070174337/"
     />
   )
 }

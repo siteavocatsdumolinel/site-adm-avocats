@@ -100,7 +100,7 @@ export default function HeroSection() {
           className="pointer-events-none absolute -left-10 md:left-0 -top-10 md:-top-6 w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-[#E5493D]/40 via-[#4d6263]/20 to-transparent blur-3xl"
         />
 
-        <div className="relative max-w-4xl w-full mx-auto text-center md:text-left">
+        <div className="relative max-w-4xl w-full mx-auto text-center md:text-left mt-16">
           {/* Titre */}
           <motion.h1
             initial={{ opacity: 0, y: 28 }}

@@ -27,6 +27,8 @@ Raphaël THOMAS est membre des EDC.`}
         { label: 'Droit pénal', href: '/competences#droit-penal' },
       ]}
       phone="03 20 12 10 60"
+      email="rthomas@admavocats.fr"
+      linkedin="https://www.linkedin.com/in/rapha%C3%ABl-thomas-6a8666154/"
     />
   )
 }
