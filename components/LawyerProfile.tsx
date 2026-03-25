@@ -19,6 +19,7 @@ interface LawyerProfileProps {
   phone: string
   email?: string
   linkedin?: string
+  badge?: string
 }
 
 export default function LawyerProfile({
@@ -33,6 +34,7 @@ export default function LawyerProfile({
   phone,
   email,
   linkedin,
+  badge,
 }: LawyerProfileProps) {
   // Paragraphes : retours à la ligne explicites, ou découpage intelligent par phrases
   const bioParagraphs = (() => {
@@ -143,6 +145,12 @@ export default function LawyerProfile({
                 </div>
               ) : (
                 <p className="text-[#313e35]/90 text-sm leading-[1.75] mb-6">{biography}</p>
+              )}
+
+              {badge && (
+                <div className="flex justify-center mb-6">
+                  <img src={badge} alt="Badge spécialiste" className="max-h-20 w-auto" />
+                </div>
               )}
 
               {langue && (
