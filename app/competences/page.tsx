@@ -12,21 +12,21 @@ export const metadata: Metadata = {
 
 const referents = {
   commercial: [
-    { name: 'Frank BECKELYNCK', photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/rd-frank-beckelink--232x232.jpg', href: '/frank-beckelynck-avocat' },
-    { name: 'Raphaël THOMAS', photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/rd-raphael-thomas-232x232.jpg', href: '/raphael-thomas-avocat' },
+    { name: 'Frank BECKELYNCK', photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat' },
+    { name: 'Raphaël THOMAS', photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat' },
   ],
   penal: [
-    { name: 'Frank BECKELYNCK', photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/rd-frank-beckelink--232x232.jpg', href: '/frank-beckelynck-avocat' },
-    { name: 'Raphaël THOMAS', photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/rd-raphael-thomas-232x232.jpg', href: '/raphael-thomas-avocat' },
+    { name: 'Frank BECKELYNCK', photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat' },
+    { name: 'Raphaël THOMAS', photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat' },
   ],
   social: [
-    { name: 'Caroline DUQUESNE', photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/rd-caroline-duquesne--232x232.jpg', href: '/caroline-duquesne-avocat' },
-    { name: 'Charlotte LEFEBVRE', photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2026/02/rd-charlotte-lefebvre-232x232.png', href: '/charlotte-lefebvre-avocat' },
-    { name: 'Claire FRYS', photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2018/05/rd-claire-frys--232x232.jpg', href: '/claire-frys-avocat' },
-    { name: 'Christophe LECLERCQ', photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2025/04/Cleclercq-bw-232x232.png', href: '/leclercq-christophe' },
+    { name: 'Caroline DUQUESNE', photo: '/images/equipe/caroline-duquesne-.jpg', href: '/caroline-duquesne-avocat' },
+    { name: 'Charlotte LEFEBVRE', photo: '/images/equipe/charlotte-lefebvre.png', href: '/charlotte-lefebvre-avocat' },
+    { name: 'Claire FRYS', photo: '/images/equipe/claire-frys.jpg', href: '/claire-frys-avocat' },
+    { name: 'Christophe LECLERCQ', photo: '/images/equipe/christophe-leclerq.jpg', href: '/leclercq-christophe' },
   ],
   fiscal: [
-    { name: 'Eric GARDIN', photo: 'https://adm-avocatsdumolinel.com/wp-content/uploads/2025/04/circle-bw-eric-232x232.png', href: '/eric-gardin' },
+    { name: 'Eric GARDIN', photo: '/images/equipe/eric-gardin.png', href: '/eric-gardin' },
   ],
 }
 
@@ -35,8 +35,8 @@ function ReferentAvatars({ people }: { people: { name: string; photo: string; hr
     <div className="flex flex-col gap-6">
       {people.map((p) => (
         <Link key={p.href} href={p.href} className="group flex flex-col items-center text-center">
-          <div className="w-20 h-20 rounded-full overflow-hidden ring-2 ring-[#313E35]/10 group-hover:ring-[#E5493D]/30 transition-all duration-300 shrink-0 mb-3">
-            <img src={p.photo} alt={p.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" />
+          <div className="w-28 h-28 rounded-full overflow-hidden ring-2 ring-[#313E35]/10 group-hover:ring-[#E5493D]/30 transition-all duration-300 shrink-0 mb-3">
+            <img src={p.photo} alt={p.name} className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-300" />
           </div>
           <span className="text-[#313E35] text-sm font-medium group-hover:text-[#E5493D] transition-colors duration-200 mb-2">
             {p.name}
