@@ -96,14 +96,7 @@ export default function Navbar() {
               onToggle={() => setOpenDropdown(openDropdown === 'contact' ? null : 'contact')}
               links={contactLinks}
             />
-            <Link
-              href="/le-blog"
-              className="relative group px-4 py-2 text-sm font-medium tracking-wide text-[#313E35]/80 hover:text-[#E5493D] transition-colors duration-200"
-              onClick={() => setOpenDropdown(null)}
-            >
-              Blog
-              <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-[#E5493D] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left rounded-full" />
-            </Link>
+            
           </div>
 
           {/* Téléphone — droite */}
