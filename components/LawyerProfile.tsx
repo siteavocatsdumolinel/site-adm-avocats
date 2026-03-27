@@ -89,7 +89,6 @@ export default function LawyerProfile({
               </div>
               <h1
                 className="text-[#313e35] text-xl lg:text-2xl font-semibold mt-4 mb-1"
-                style={{ fontFamily: 'var(--font-playfair)' }}
               >
                 {name}
               </h1>

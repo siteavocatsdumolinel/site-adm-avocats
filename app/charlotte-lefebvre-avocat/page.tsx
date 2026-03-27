@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import LawyerProfile from '@/components/LawyerProfile'
 
 export const metadata: Metadata = {
-  title: 'Charlotte LEFEBVRE – Avocat en droit social, Associée',
+  title: 'Charlotte LEFEBVRE – Avocat en droit social',
   description: 'Charlotte Lefebvre, avocat associée au cabinet ADM, spécialisée en droit social des entreprises. Présidente du CJD Lille Métropole 2024-2026.',
 }
 
@@ -10,7 +10,7 @@ export default function CharlotteLefebvrePage() {
   return (
     <LawyerProfile
       name="Charlotte LEFEBVRE"
-      title="Avocat au Barreau de LILLE — Associée"
+      title="Avocat au Barreau de LILLE"
       photo="/images/equipe/charlotte-lefebvre.png"
       biography={`Titulaire d'un Master en Droit social (Université Paris I Panthéon-Sorbonne), Charlotte LEFEBVRE a prêté serment au Barreau de PARIS en 2013. Elle débute sa carrière au sein de cabinets spécialisés en droit social des entreprises, FROMONT BRIENS puis VOLTAIRE AVOCATS, où elle accompagne une clientèle d'entreprises sur l'ensemble de leurs problématiques sociales.
 

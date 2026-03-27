@@ -20,7 +20,7 @@ Passionné par la transmission du savoir, il fonde en 1997 le Mastère de Gestio
 
 À 40 ans, Éric Gardin choisit de mettre son expertise au service des contribuables. En 2006, il crée son propre cabinet aux côtés de confrères spécialisés en transmission d'entreprise, droit des sociétés et gestion patrimoniale. Il accompagne particuliers et entreprises dans la préparation, la gestion et le contentieux liés au contrôle fiscal.`}
       competences={[
-        { label: 'Droit fiscal', href: '/competences#droit-fiscal' },
+        { label: 'Droit fiscal & Droit des sociétés', href: '/competences#droit-fiscal' },
         { label: 'Droit douanier', href: '/competences#droit-fiscal' },
       ]}
       phone="06 28 49 29 33"

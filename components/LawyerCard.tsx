@@ -39,7 +39,6 @@ export default function LawyerCard({ name, title, tags, photo, href, email, link
           <div className="text-center">
             <h3
               className="text-[#313E35] text-sm font-semibold tracking-wide mb-1 group-hover:text-[#E5493D] transition-colors duration-300"
-              style={{ fontFamily: 'var(--font-playfair)' }}
             >
               {name}
             </h3>

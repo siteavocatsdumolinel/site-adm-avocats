@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --font-playfair: 'Playfair Display', Georgia, serif;
-  --font-inter: 'Inter', system-ui, sans-serif;
   /* Palette officielle du site */
   --adm-rouge: #E5493D;
   --adm-teal: #4d6263;
@@ -45,6 +43,12 @@ h2.font-light,
 h3.font-light,
 h4.font-light {
   font-weight: 500;
+}
+
+/* Syncopate : forcer 400 et majuscules partout où la police est utilisée */
+[style*="--font-playfair"] {
+  font-weight: 400 !important;
+  text-transform: uppercase;
 }
 
 .section-padding {

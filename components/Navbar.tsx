@@ -9,7 +9,7 @@ const competencesLinks = [
   { label: 'Droit commercial', href: '/competences#droit-commercial' },
   { label: 'Droit pénal', href: '/competences#droit-penal' },
   { label: 'Droit social', href: '/competences#droit-social' },
-  { label: 'Droit fiscal', href: '/competences#droit-fiscal' },
+  { label: 'Droit fiscal & Droit des sociétés', href: '/competences#droit-fiscal' },
 ]
 
 const equipeLinks = [
@@ -59,16 +59,16 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-[#313E35]/8 transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center h-16 lg:h-20">
+        <div className="grid grid-cols-3 items-center h-20">
 
           {/* Logo — gauche */}
           <Link href="/" className="flex items-center" aria-label="ADM Avocats du Molinel - Accueil">
             <Image
               src="/images/logo_adm.png"
               alt="ADM Avocats du Molinel"
-              width={140}
-              height={48}
-              className="h-14 w-auto object-contain object-left"
+              width={200}
+              height={70}
+              className="h-20 w-auto object-contain object-left"
               priority
             />
           </Link>

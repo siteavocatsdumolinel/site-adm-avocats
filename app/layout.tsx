@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
-import { Lora, Inter } from 'next/font/google'
+import { Syncopate, Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CookieConsentBanner from '@/components/CookieConsentBanner'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 
-// On garde le même nom de variable CSS (---font-playfair) pour éviter de modifier toutes les pages.
-const lora = Lora({
+// On garde le même nom de variable CSS (--font-playfair) pour éviter de modifier toutes les pages.
+const syncopate = Syncopate({
   subsets: ['latin'],
   variable: '--font-playfair',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '700'],
   display: 'swap',
+  fallback: ['sans-serif'],
 })
 
 const inter = Inter({
@@ -35,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${lora.variable} ${inter.variable}`}>
+    <html lang="fr" className={`${syncopate.variable} ${inter.variable}`}>
       <body>
         <GoogleAnalytics />
         <Navbar />

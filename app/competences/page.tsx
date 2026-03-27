@@ -75,7 +75,7 @@ export default function CompetencesPage() {
                 { label: 'Droit commercial', href: '#droit-commercial' },
                 { label: 'Droit pénal', href: '#droit-penal' },
                 { label: 'Droit social', href: '#droit-social' },
-                { label: 'Droit fiscal', href: '#droit-fiscal' },
+                { label: 'Droit fiscal & Droit des sociétés', href: '#droit-fiscal' },
               ].map((item) => (
                 <a
                   key={item.href}
@@ -252,7 +252,7 @@ export default function CompetencesPage() {
       <section id="droit-fiscal" className="py-20 md:py-28 bg-[#f8f9f9] scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeInSection>
-            <DepartmentSectionHeader title="Droit fiscal" iconKey="fiscal" />
+            <DepartmentSectionHeader title="Droit fiscal & Droit des sociétés" iconKey="fiscal" />
             <div className="grid lg:grid-cols-[1fr_2fr] gap-14 lg:gap-24 lg:items-center">
               <div className="lg:sticky lg:top-28">
                 <ReferentAvatars people={referents.fiscal} />
@@ -263,6 +263,7 @@ export default function CompetencesPage() {
                   { title: 'Fusions – Acquisitions, TUP, Transmissions', items: ["Audit fiscal préalable à une acquisition", "Contrôle fiscal « à blanc » de votre entreprise", "Fusions-Acquisitions", "Accompagnement lors de la cession", "Création de tous types de sociétés"] },
                   { title: 'Formation fiscale', items: ["Ce qui se conçoit bien s'énonce clairement…", "L'occasion d'un enrichissement personnel favorisé par l'échange", "Formation à la carte pour vos équipes"] },
                   { title: 'Contentieux fiscal et douanier', items: ["Examen de la régularité des procédures", "Computation des délais et rédaction de réclamations", "Saisines des diverses commissions fiscales", "Sollicitation d'entretiens hiérarchiques", "Recours devant tous types de juridictions"] },
+                  { title: 'Droit des sociétés', items: ["Constitution et rédaction des statuts, pactes d'associés et règlements intérieurs", "Accompagnement des opérations de fusions, scissions et apports partiels d'actifs", "Restructurations et mise en place de holdings animatrices", "Gestion des conflits entre associés et responsabilité des dirigeants"] },
                 ].map((block) => (
                   <div key={block.title} className="rounded-2xl border border-[#313E35]/6 bg-white p-6 md:p-8">
                     <h3 className="text-[#313E35] text-xs font-semibold tracking-[0.15em] uppercase mb-5">{block.title}</h3>

@@ -13,19 +13,18 @@ export const metadata: Metadata = {
 const lawyers = [
   { name: 'Frank BECKELYNCK', title: 'Avocat spécialiste en droit pénal / Avocat en droit civil et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat', email: 'fbeckelynck@admavocats.fr', linkedin: 'https://www.linkedin.com/in/frank-beckelynck-45a51316/' },
   { name: 'Caroline DUQUESNE', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/caroline-duquesne-.jpg', href: '/caroline-duquesne-avocat', email: 'cduquesne@admavocats.fr', linkedin: 'https://www.linkedin.com/in/caroline-duquesne-5069aa39/' },
-  { name: 'Eric GARDIN', title: 'Avocat fiscaliste', tags: ['Droit fiscal'], photo: '/images/equipe/eric-gardin.png', href: '/eric-gardin', email: 'gardin.avocat@gmail.com', linkedin: 'https://www.linkedin.com/in/eric-gardin-070174337/' },
+  { name: 'Eric GARDIN', title: 'Avocat fiscaliste', tags: ['Droit fiscal & Droit des sociétés'], photo: '/images/equipe/eric-gardin.png', href: '/eric-gardin', email: 'gardin.avocat@gmail.com', linkedin: 'https://www.linkedin.com/in/eric-gardin-070174337/' },
   { name: 'Raphaël THOMAS', title: 'Avocat en droit pénal et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat', email: 'rthomas@admavocats.fr', linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-thomas-6a8666154/' },
-  { name: 'Charlotte LEFEBVRE', title: 'Avocat en droit social — Associée', tags: ['Droit social'], photo: '/images/equipe/charlotte-lefebvre.png', href: '/charlotte-lefebvre-avocat', email: 'clefebvre@admavocats.fr', linkedin: 'https://www.linkedin.com/in/charlotte-lefebvre-1668b1143/' },
-  { name: 'Claire FRYS', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/claire-frys.jpg', href: '/claire-frys-avocat', email: 'cfrys@admavocats.fr', linkedin: 'https://www.linkedin.com/in/claire-frys-5a883810b/' },
-  { name: 'Christophe LECLERCQ', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/christophe-leclerq.jpg', href: '/leclercq-christophe', email: 'cleclercq@admavocats.fr', linkedin: 'https://www.linkedin.com/in/christophe-leclercq-b6a265101/' },
+  { name: 'Charlotte LEFEBVRE', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/charlotte-lefebvre.png', href: '/charlotte-lefebvre-avocat', email: 'clefebvre@admavocats.fr', linkedin: 'https://www.linkedin.com/in/charlotte-lefebvre-1668b1143/' },
+  { name: 'Claire FRYS', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/claire-frys.jpg', href: '/claire-frys-avocat', email: 'cduquesne@admavocats.fr', linkedin: 'https://www.linkedin.com/in/claire-frys-5a883810b/' },
+  { name: 'Christophe LECLERCQ', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/christophe-leclerq.jpg', href: '/leclercq-christophe', email: 'cduquesne@admavocats.fr', linkedin: 'https://www.linkedin.com/in/christophe-leclercq-b6a265101/' },
 ]
 
 const competences = [
   { label: 'DROIT COMMERCIAL', href: '/competences#droit-commercial', desc: 'Contrats, contentieux, recouvrement, droit bancaire', iconKey: 'commercial' },
   { label: 'DROIT PÉNAL', href: '/competences#droit-penal', desc: 'Droit pénal des affaires, presse, responsabilité', iconKey: 'penal' },
   { label: 'DROIT SOCIAL', href: '/competences#droit-social', desc: 'Relations du travail, contentieux, négociation', iconKey: 'social' },
-  { label: 'DROIT FISCAL', href: '/competences#droit-fiscal', desc: 'Contrôle fiscal, contentieux, transmissions', iconKey: 'fiscal' },
-  { label: 'DROIT DES SOCIÉTÉS', href: '/competences#droit-societes', desc: 'Fusions, acquisitions, création de sociétés', iconKey: 'societes' },
+  { label: 'DROIT FISCAL & DROIT DES SOCIÉTÉS', href: '/competences#droit-fiscal', desc: 'Contrôle fiscal, contentieux, fusions, acquisitions, création de sociétés', iconKey: 'fiscal' },
 ]
 
 export default function HomePage() {
@@ -123,7 +122,7 @@ export default function HomePage() {
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 items-stretch">
             {competences.map((c, i) => (
               <FadeInSection key={c.label} delay={i * 0.06} subtleScale>
                 <Link
