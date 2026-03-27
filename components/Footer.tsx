@@ -63,11 +63,7 @@ export default function Footer() {
                   Infos & Contact
                 </Link>
               </li>
-              <li>
-                <Link href="/le-blog" className="text-white/50 hover:text-white transition-colors duration-200 inline-block hover:translate-x-0.5">
-                  Blog
-                </Link>
-              </li>
+             
             </ul>
           </div>
         </div>
