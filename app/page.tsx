@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 }
 
 const lawyers = [
-  { name: 'Frank BECKELYNCK', title: 'Avocat spécialiste en droit pénal / Avocat en droit civil et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat', email: 'fbeckelynck@admavocats.fr', linkedin: 'https://www.linkedin.com/in/frank-beckelynck-45a51316/' },
+  { name: 'Frank BECKELYNCK', title: 'Avocat spécialiste en droit pénal / Avocat en droit civil et commercial', tags: ['Droit pénal', 'Droit civil / Droit commercial'], photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat', email: 'fbeckelynck@admavocats.fr', linkedin: 'https://www.linkedin.com/in/frank-beckelynck-45a51316/' },
   { name: 'Caroline DUQUESNE', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/caroline-duquesne-.jpg', href: '/caroline-duquesne-avocat', email: 'cduquesne@admavocats.fr', linkedin: 'https://www.linkedin.com/in/caroline-duquesne-5069aa39/' },
   { name: 'Eric GARDIN', title: 'Avocat fiscaliste', tags: ['Droit fiscal & Droit des sociétés'], photo: '/images/equipe/eric-gardin.png', href: '/eric-gardin', email: 'gardin.avocat@gmail.com', linkedin: 'https://www.linkedin.com/in/eric-gardin-070174337/' },
   { name: 'Raphaël THOMAS', title: 'Avocat en droit pénal et commercial', tags: ['Droit pénal', 'Droit commercial'], photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat', email: 'rthomas@admavocats.fr', linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-thomas-6a8666154/' },
@@ -21,7 +21,7 @@ const lawyers = [
 ]
 
 const competences = [
-  { label: 'DROIT COMMERCIAL', href: '/competences#droit-commercial', desc: 'Contrats, contentieux, recouvrement, droit bancaire', iconKey: 'commercial' },
+  { label: 'DROIT COMMERCIAL & DROIT CIVIL', href: '/competences#droit-commercial', desc: 'Contrats, contentieux, recouvrement, droit bancaire', iconKey: 'commercial' },
   { label: 'DROIT PÉNAL', href: '/competences#droit-penal', desc: 'Droit pénal des affaires, presse, responsabilité', iconKey: 'penal' },
   { label: 'DROIT SOCIAL', href: '/competences#droit-social', desc: 'Relations du travail, contentieux, négociation', iconKey: 'social' },
   { label: 'DROIT FISCAL & DROIT DES SOCIÉTÉS', href: '/competences#droit-fiscal', desc: 'Contrôle fiscal, contentieux, fusions, acquisitions, création de sociétés', iconKey: 'fiscal' },
@@ -92,7 +92,7 @@ export default function HomePage() {
                         key={item}
                         className="flex items-center gap-3 py-3.5 border-b border-[#313E35]/10 text-[#313E35] text-base font-medium"
                       >
-                        <span aria-hidden="true" className="w-1 h-1 rounded-full bg-[#E5493D] shrink-0" />
+                        <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/50 shrink-0" />
                         {item}
                       </li>
                     ))}

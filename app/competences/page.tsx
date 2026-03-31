@@ -72,7 +72,7 @@ export default function CompetencesPage() {
           <FadeInSection delay={0.1}>
             <nav className="flex flex-wrap gap-3 mt-12" aria-label="Domaines">
               {[
-                { label: 'Droit commercial', href: '#droit-commercial' },
+                { label: 'Droit civil & Droit commercial', href: '#droit-commercial' },
                 { label: 'Droit pénal', href: '#droit-penal' },
                 { label: 'Droit social', href: '#droit-social' },
                 { label: 'Droit fiscal & Droit des sociétés', href: '#droit-fiscal' },
@@ -94,7 +94,7 @@ export default function CompetencesPage() {
       <section id="droit-commercial" className="py-20 md:py-28 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeInSection>
-            <DepartmentSectionHeader title="Droit commercial" iconKey="commercial" />
+            <DepartmentSectionHeader title="Droit civil & Droit commercial" iconKey="commercial" />
             <div className="grid lg:grid-cols-[1fr_2fr] gap-14 lg:gap-24 lg:items-center">
               <div className="lg:sticky lg:top-28">
                 <ReferentAvatars people={referents.commercial} />
@@ -111,7 +111,7 @@ export default function CompetencesPage() {
                     "Droit bancaire",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-[#4d6263] text-sm leading-relaxed">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/40 shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/50 shrink-0 mt-2" />
                       {item}
                     </li>
                   ))}
@@ -146,7 +146,7 @@ export default function CompetencesPage() {
                       "Formation aux chefs d'entreprise sur la prévention des risques",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3 text-[#4d6263] text-sm leading-relaxed">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/40 shrink-0 mt-2" />{item}
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/50 shrink-0 mt-2" />{item}
                       </li>
                     ))}
                   </ul>
@@ -156,7 +156,7 @@ export default function CompetencesPage() {
                   <ul className="space-y-3">
                     {["Diffamation et injure, droit de réponse, notification loi LCEN"].map((item) => (
                       <li key={item} className="flex items-start gap-3 text-[#4d6263] text-sm leading-relaxed">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/40 shrink-0 mt-2" />{item}
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/50 shrink-0 mt-2" />{item}
                       </li>
                     ))}
                   </ul>
@@ -171,7 +171,7 @@ export default function CompetencesPage() {
                       "Aménagement des peines, sanctions et mentions au casier judiciaire et au TAJ",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3 text-[#4d6263] text-sm leading-relaxed">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/40 shrink-0 mt-2" />{item}
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/50 shrink-0 mt-2" />{item}
                       </li>
                     ))}
                   </ul>
@@ -233,8 +233,8 @@ export default function CompetencesPage() {
                       "Accident du travail et maladie professionnelle",
                       "Faute inexcusable",
                     ].map((item) => (
-                      <li key={item} className="text-[#313E35] text-sm leading-relaxed">
-                        {item}
+                      <li key={item} className="flex items-start gap-3 text-[#313E35] text-sm leading-relaxed">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/50 shrink-0 mt-2" />{item}
                       </li>
                     ))}
                   </ul>
@@ -260,7 +260,7 @@ export default function CompetencesPage() {
               <div className="grid sm:grid-cols-2 gap-6">
                 {[
                   { title: 'Contrôle fiscal', items: ["On subit souvent ce que l'on ne prépare pas ou insuffisamment", "Méfiance mais pas défiance, collaborer au contrôle tout en maîtrisant le niveau des informations délivrées", "Expliciter vos décisions de gestion", "Replacer la gestion fiscale de votre entreprise dans un juste contexte : un outil pour l'entreprise et non une fin en soi"] },
-                  { title: 'Fusions – Acquisitions, TUP, Transmissions', items: ["Audit fiscal préalable à une acquisition", "Contrôle fiscal « à blanc » de votre entreprise", "Fusions-Acquisitions", "Accompagnement lors de la cession", "Création de tous types de sociétés"] },
+                  { title: 'Fusions – Acquisitions, TUP, Transmissions', items: ["Audit fiscal préalable à une acquisition", "Contrôle fiscal « à blanc » de votre entreprise", "Fusions – Acquisitions", "Accompagnement lors de la cession", "Création de tous types de sociétés"] },
                   { title: 'Formation fiscale', items: ["Ce qui se conçoit bien s'énonce clairement…", "L'occasion d'un enrichissement personnel favorisé par l'échange", "Formation à la carte pour vos équipes"] },
                   { title: 'Contentieux fiscal et douanier', items: ["Examen de la régularité des procédures", "Computation des délais et rédaction de réclamations", "Saisines des diverses commissions fiscales", "Sollicitation d'entretiens hiérarchiques", "Recours devant tous types de juridictions"] },
                   { title: 'Droit des sociétés', items: ["Constitution et rédaction des statuts, pactes d'associés et règlements intérieurs", "Accompagnement des opérations de fusions, scissions et apports partiels d'actifs", "Restructurations et mise en place de holdings animatrices", "Gestion des conflits entre associés et responsabilité des dirigeants"] },
@@ -270,7 +270,7 @@ export default function CompetencesPage() {
                     <ul className="space-y-3">
                       {block.items.map((item) => (
                         <li key={item} className="flex items-start gap-3 text-[#4d6263] text-sm leading-relaxed">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/40 shrink-0 mt-2" />{item}
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#E5493D]/50 shrink-0 mt-2" />{item}
                         </li>
                       ))}
                     </ul>

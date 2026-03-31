@@ -34,7 +34,7 @@ export default function ContactPage() {
               <FadeInSection>
                 <p className="text-[#E5493D] text-xs tracking-[0.3em] uppercase mb-6">Coordonnées</p>
                 <div className="space-y-1 text-[#4d6263] text-sm leading-relaxed mb-6">
-                  <p className="text-[#313e35] font-medium text-base">Centre des affaires du Molinel, Bat. E</p>
+                  <p className="text-[#313e35] font-medium text-base">Centre d'Affaires du Molinel, Bât. E</p>
                   <p>Avenue de la Marne</p>
                   <p>Allée de la Marque</p>
                   <p>59290 Wasquehal</p>
@@ -54,6 +54,18 @@ export default function ContactPage() {
             <section id="situation">
               <FadeInSection delay={0.1}>
                 <p className="text-[#E5493D] text-xs tracking-[0.3em] uppercase mb-6">Situation</p>
+                <div className="w-full aspect-[16/9] overflow-hidden rounded-xl mb-5">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!4v1774960094525!6m8!1m7!1stKkbgyfGKfz1zqzXlVj_ew!2m2!1d50.68167603904637!2d3.115184384007071!3f210.96716!4f0!5f0.7820865974627469"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Vue Street View du cabinet ADM Avocats du Molinel"
+                  />
+                </div>
                 <div className="w-full aspect-[4/3] overflow-hidden bg-[#f2f2f2] mb-5">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.4!2d3.1148888!3d50.6819575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQwJzU1LjEiTiAzwrAwNic1My42IkU!5e0!3m2!1sfr!2sfr!4v1"

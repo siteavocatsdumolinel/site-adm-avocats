@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const competencesLinks = [
-  { label: 'Droit commercial', href: '/competences#droit-commercial' },
+  { label: 'Droit civil & Droit commercial', href: '/competences#droit-commercial' },
   { label: 'Droit pénal', href: '/competences#droit-penal' },
   { label: 'Droit social', href: '/competences#droit-social' },
   { label: 'Droit fiscal & Droit des sociétés', href: '/competences#droit-fiscal' },
@@ -89,13 +89,13 @@ export default function Navbar() {
               onToggle={() => setOpenDropdown(openDropdown === 'equipe' ? null : 'equipe')}
               links={equipeLinks}
             />
-            <DropdownItem
-              label="Infos & Contact"
+            <Link
               href="/informations-et-contact"
-              isOpen={openDropdown === 'contact'}
-              onToggle={() => setOpenDropdown(openDropdown === 'contact' ? null : 'contact')}
-              links={contactLinks}
-            />
+              className="relative group/nav pl-4 pr-4 py-2 text-sm font-medium tracking-wide text-[#313E35]/80 hover:text-[#E5493D] transition-colors duration-200 whitespace-nowrap"
+            >
+              Infos & Contact
+              <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-[#E5493D] rounded-full scale-x-0 group-hover/nav:scale-x-100 transition-transform duration-200 origin-left" />
+            </Link>
             
           </div>
 
@@ -134,10 +134,11 @@ export default function Navbar() {
         <div className="px-6 py-8 space-y-1">
           <MobileDropdown label="Compétences" href="/competences" isOpen={mobileExpanded === 'competences'} onToggle={() => setMobileExpanded(mobileExpanded === 'competences' ? null : 'competences')} links={competencesLinks} onClose={() => setMobileOpen(false)} />
           <MobileDropdown label="Équipe" href="/#equipe" isOpen={mobileExpanded === 'equipe'} onToggle={() => setMobileExpanded(mobileExpanded === 'equipe' ? null : 'equipe')} links={equipeLinks} onClose={() => setMobileOpen(false)} />
-          <MobileDropdown label="Infos & Contact" href="/informations-et-contact" isOpen={mobileExpanded === 'contact'} onToggle={() => setMobileExpanded(mobileExpanded === 'contact' ? null : 'contact')} links={contactLinks} onClose={() => setMobileOpen(false)} />
-          <Link href="/le-blog" className="block py-4 text-[#313E35]/80 text-base tracking-wide border-t border-[#313E35]/10" onClick={() => setMobileOpen(false)}>
-            Blog
-          </Link>
+          <div className="border-t border-[#313E35]/10">
+            <Link href="/informations-et-contact" className="block py-4 text-[#313E35] text-base tracking-wide" onClick={() => setMobileOpen(false)}>
+              Infos & Contact
+            </Link>
+          </div>
           <div className="pt-6">
             <a
               href="tel:0320121060"

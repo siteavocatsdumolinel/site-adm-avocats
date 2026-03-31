@@ -17,11 +17,18 @@ export default function FrankBeckelynckPage() {
 
 Il sécurise les différentes étapes des relations contractuelles (négociation, rédaction, exécution, rupture…) et intervient efficacement en droit commercial.
 
-Riche de son expérience dans l'enseignement supérieur à la Faculté de droit de Lille et dans de grandes écoles de commerce (EDHEC, SKEMA…), il assure des formations adaptées aux problématiques de l'entreprise.
-
-Spécialiste en droit pénal dès 1997, et particulièrement en droit pénal des affaires, il assure un accompagnement juridique pragmatique dans toutes les situations sensibles (gestion des médias, assistance et pilotage lors des contrôles et enquêtes des autorités, assistance et représentation devant toutes les juridictions, aménagement des sanctions). Membre de l'APM.`}
+Spécialiste en droit pénal dès 1997, et particulièrement en droit pénal des affaires, il assure un accompagnement juridique pragmatique dans toutes les situations sensibles (gestion des médias, assistance et pilotage lors des contrôles et enquêtes des autorités, assistance et représentation devant toutes les juridictions, aménagement des sanctions).`}
+      engagements={[
+        "Membre de l'APM (Association Progrès du Management) depuis 2011",
+        "Ancien Membre de la Table Ronde Française jusqu'en 2003",
+        "Professeur de Droit pénal des affaires — ESC SKEMA (2006–2010)",
+        "Professeur de Droit pénal des affaires — IAE (2005–2006)",
+        "Chargé de cours en Droit pénal des affaires — Faculté libre de droit, DESS juriste d'entreprise (2002–2005)",
+        "Responsable de la formation en Droit pénal — CRFPB, Cour d'appel de Douai (1999–2001)",
+        "Professeur de Droit pénal des affaires — EDHEC (1987–1990)",
+      ]}
       competences={[
-        { label: 'Droit commercial', href: '/competences#droit-commercial' },
+        { label: 'Droit civil & Droit commercial', href: '/competences#droit-commercial' },
         { label: 'Droit pénal', href: '/competences#droit-penal' },
       ]}
       phone="03 20 12 10 60"

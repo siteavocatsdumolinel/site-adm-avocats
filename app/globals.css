@@ -13,13 +13,31 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Texture papier réutilisable */
+:root {
+  --paper-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
+}
+
 body {
-  background-color: #ffffff;
+  /* AMBIANCE CHAUDE — remplacer #fbf6ef par #ffffff pour revenir à l'ambiance neutre */
+  background-color: #f8f1e6;
+  background-image: var(--paper-texture);
   color: var(--adm-fonce);
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* AMBIANCE CHAUDE — supprimer ce bloc pour revenir à l'ambiance neutre */
+.bg-\[\#f8f9f9\] {
+  background-color: #f2e8d8 !important;
+  background-image: var(--paper-texture) !important;
+}
+.bg-white {
+  background-color: #faf4ea !important;
+  background-image: var(--paper-texture) !important;
+}
+/* FIN AMBIANCE CHAUDE */
 
 ::-webkit-scrollbar {
   width: 6px;
