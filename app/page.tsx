@@ -21,7 +21,7 @@ const lawyers = [
 ]
 
 const competences = [
-  { label: 'DROIT COMMERCIAL & DROIT CIVIL', href: '/competences#droit-commercial', desc: 'Contrats, contentieux, recouvrement, droit bancaire', iconKey: 'commercial' },
+  { label: 'DROIT CIVIL & DROIT COMMERCIAL', href: '/competences#droit-commercial', desc: 'Contrats, contentieux, recouvrement, droit bancaire', iconKey: 'commercial' },
   { label: 'DROIT PÉNAL', href: '/competences#droit-penal', desc: 'Droit pénal des affaires, presse, responsabilité', iconKey: 'penal' },
   { label: 'DROIT SOCIAL', href: '/competences#droit-social', desc: 'Relations du travail, contentieux, négociation', iconKey: 'social' },
   { label: 'DROIT FISCAL & DROIT DES SOCIÉTÉS', href: '/competences#droit-fiscal', desc: 'Contrôle fiscal, contentieux, fusions, acquisitions, création de sociétés', iconKey: 'fiscal' },
