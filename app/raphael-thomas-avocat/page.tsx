@@ -13,15 +13,18 @@ export default function RaphaelThomasPage() {
       title="Avocat au Barreau de LILLE"
       structure="SELARL d'avocats BECKELYNCK & THOMAS"
       photo="/images/equipe/raphael-thomas.jpg"
-      biography={`Titulaire d'une maîtrise mention carrières judiciaires et sciences criminelles (Université Panthéon-Assas), Raphaël THOMAS a prêté serment au Barreau de PARIS en 2014, et a rejoint le Cabinet ADM en 2015 après avoir acquis une première expérience au sein d'un Cabinet spécialisé en Droit pénal.
+      biography={`Titulaire d'une Maîtrise mention carrières judiciaires et sciences criminelles (Université Paris II Panthéon-Assas), Raphaël THOMAS a prêté serment au Barreau de PARIS en 2014. Il débute sa carrière au sein d’un Cabinet spécialisé en Droit pénal avant de rejoindre le Cabinet ADM en 2015.
+
+ 
 
 Il s'associe en 2025 avec Frank BECKELYNCK au sein de la SELARL d'Avocats BECKELYNCK & THOMAS.
 
-Il intervient en droit pénal et en droit commercial, tant en conseil qu'au contentieux sur l'ensemble du territoire national, y compris Outre-Mer.
+ 
 
-Il intervient également dans les procédures d'indemnisation des victimes, en particulier à la suite d'accidents de la circulation.`}
+Raphaël THOMAS intervient en droit pénal et en droit commercial, en conseil comme en contentieux, sur l'ensemble du territoire national, y compris Outre-Mer. Il accompagne également les victimes dans les procédures d'indemnisation de leurs préjudices, en particulier à la suite d'accidents de la circulation.`}
       engagements={[
-        'Membre des EDC (Entrepreneurs et Dirigeants Chrétiens)',
+        'Membre des EDC',
+        'Membre de l’Association Française de Criminologie',
       ]}
       competences={[
         { label: 'Droit civil & Droit commercial', href: '/competences#droit-commercial' },
