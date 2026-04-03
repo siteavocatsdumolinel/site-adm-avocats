@@ -7,7 +7,7 @@ export default function DepartmentSectionHeader({ title, iconKey = 'social' }: {
         {getDepartmentIcon(iconKey)}
       </div>
       <p className="text-[#E5493D] text-xs font-semibold tracking-[0.25em] uppercase mb-2">Département</p>
-      <h2 className="text-[#313E35] text-2xl md:text-3xl font-semibold uppercase tracking-wide text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
+      <h2 className="text-[#313E35] text-2xl md:text-3xl font-bold uppercase tracking-wide text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
         {title}
       </h2>
     </div>

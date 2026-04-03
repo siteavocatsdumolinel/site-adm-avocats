@@ -14,9 +14,13 @@ interface LawyerCardProps {
   linkedin?: string
   /** Délai d'entrée pour effet stagger (optionnel) */
   delay?: number
+  /** Classes CSS supplémentaires sur l'image (optionnel) */
+  extraImageClass?: string
+  /** Désactive le filtre grayscale (si la photo est déjà en N&B) */
+  noGrayscale?: boolean
 }
 
-export default function LawyerCard({ name, title, tags, photo, href, email, linkedin, delay = 0 }: LawyerCardProps) {
+export default function LawyerCard({ name, title, tags, photo, href, email, linkedin, delay = 0, extraImageClass = '', noGrayscale = false }: LawyerCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -33,7 +37,7 @@ export default function LawyerCard({ name, title, tags, photo, href, email, link
             <img
               src={photo}
               alt={name}
-              className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+              className={`w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-500 ${noGrayscale ? '' : 'grayscale group-hover:grayscale-0'} ${extraImageClass}`}
             />
           </div>
           <div className="text-center">

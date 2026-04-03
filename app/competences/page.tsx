@@ -12,25 +12,25 @@ export const metadata: Metadata = {
 
 const referents = {
   commercial: [
-    { name: 'Frank BECKELYNCK', photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat' },
-    { name: 'Raphaël THOMAS', photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat' },
+    { name: 'Frank BECKELYNCK', photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat', email: 'fbeckelynck@admavocats.fr', linkedin: 'https://www.linkedin.com/in/frank-beckelynck-45a51316/' },
+    { name: 'Raphaël THOMAS', photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat', email: 'rthomas@admavocats.fr', linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-thomas-6a8666154/' },
   ],
   penal: [
-    { name: 'Frank BECKELYNCK', photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat' },
-    { name: 'Raphaël THOMAS', photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat' },
+    { name: 'Frank BECKELYNCK', photo: '/images/equipe/frank-beckelynk.jpg', href: '/frank-beckelynck-avocat', email: 'fbeckelynck@admavocats.fr', linkedin: 'https://www.linkedin.com/in/frank-beckelynck-45a51316/' },
+    { name: 'Raphaël THOMAS', photo: '/images/equipe/raphael-thomas.jpg', href: '/raphael-thomas-avocat', email: 'rthomas@admavocats.fr', linkedin: 'https://www.linkedin.com/in/rapha%C3%ABl-thomas-6a8666154/' },
   ],
   social: [
-    { name: 'Caroline DUQUESNE', photo: '/images/equipe/caroline-duquesne-.jpg', href: '/caroline-duquesne-avocat' },
-    { name: 'Charlotte LEFEBVRE', photo: '/images/equipe/charlotte-lefebvre.png', href: '/charlotte-lefebvre-avocat' },
-    { name: 'Claire FRYS', photo: '/images/equipe/claire-frys.jpg', href: '/claire-frys-avocat' },
-    { name: 'Christophe LECLERCQ', photo: '/images/equipe/christophe-leclerq.jpg', href: '/leclercq-christophe' },
+    { name: 'Caroline DUQUESNE', photo: '/images/equipe/caroline-duquesne-.jpg', href: '/caroline-duquesne-avocat', email: 'cduquesne@admavocats.fr', linkedin: 'https://www.linkedin.com/in/caroline-duquesne-5069aa39/' },
+    { name: 'Charlotte LEFEBVRE', photo: '/images/equipe/charlotte-lefebvre.png', href: '/charlotte-lefebvre-avocat', email: 'clefebvre@admavocats.fr', linkedin: 'https://www.linkedin.com/in/charlotte-lefebvre-1668b1143/' },
+    { name: 'Claire FRYS', photo: '/images/equipe/claire-frys.jpg', href: '/claire-frys-avocat', email: 'cduquesne@admavocats.fr', linkedin: 'https://www.linkedin.com/in/claire-frys-5a883810b/' },
+    { name: 'Christophe LECLERCQ', photo: '/images/equipe/christophe-leclerq.jpg', href: '/leclercq-christophe', email: 'cduquesne@admavocats.fr', linkedin: 'https://www.linkedin.com/in/christophe-leclercq-b6a265101/' },
   ],
   fiscal: [
-    { name: 'Eric GARDIN', photo: '/images/equipe/eric-gardin.png', href: '/eric-gardin' },
+    { name: 'Eric GARDIN', photo: '/images/equipe/eric-gardin.png', href: '/eric-gardin', email: 'gardin.avocat@gmail.com', linkedin: 'https://www.linkedin.com/in/eric-gardin-070174337/' },
   ],
 }
 
-function ReferentAvatars({ people }: { people: { name: string; photo: string; href: string }[] }) {
+function ReferentAvatars({ people }: { people: { name: string; photo: string; href: string; email?: string; linkedin?: string }[] }) {
   return (
     <div className="flex flex-col gap-6">
       {people.map((p) => (
@@ -42,7 +42,7 @@ function ReferentAvatars({ people }: { people: { name: string; photo: string; hr
             {p.name}
           </span>
           <ClickStopPropagation className="inline-block">
-            <ContactIcons className="mb-0" />
+            <ContactIcons email={p.email} linkedin={p.linkedin} className="mb-0" />
           </ClickStopPropagation>
         </Link>
       ))}
@@ -65,7 +65,7 @@ export default function CompetencesPage() {
               Compétences
             </h1>
             <p className="text-[#4d6263] text-base md:text-lg mt-5 max-w-2xl leading-relaxed">
-              Un cabinet pluridisciplinaire au service des opérateurs économiques et des particuliers.
+              Un cabinet pluridisciplinaire au service des opérateurs économiques et des particuliers
             </p>
           </FadeInSection>
 
@@ -102,7 +102,7 @@ export default function CompetencesPage() {
               <div className="rounded-2xl border border-[#313E35]/6 bg-[#f8f9f9]/50 p-8 md:p-10">
                 <ul className="space-y-4">
                   {[
-                    "Contrats (contrats cadres, CGV, CGU…) — négociation, rédaction, exécution, rupture, déréférencement",
+                    "Contrats (contrats cadres, CGV, CGU…) - négociation, rédaction, exécution, rupture, déréférencement",
                     "Garanties contractuelles, voies d'exécution",
                     "Recouvrement de créances (mises en demeure, injonction de payer, procédures contentieuses)",
                     "Droit de la faillite",
@@ -185,7 +185,7 @@ export default function CompetencesPage() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8"><div className="h-px bg-[#313E35]/8" /></div>
 
       {/* DROIT SOCIAL */}
-      <section id="droit-social" className="py-20 md:py-28 bg-[#ffffff] scroll-mt-24">
+      <section id="droit-social" className="py-20 md:py-28 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeInSection>
             <DepartmentSectionHeader title="Droit social" iconKey="social" />
@@ -196,7 +196,7 @@ export default function CompetencesPage() {
 
               {/* Colonne droite : blocs de texte + liste */}
               <div className="space-y-8">
-                <div className="rounded-2xl border border-[#313E35]/6 bg-white p-8 md:p-10">
+                <div className="rounded-2xl border border-[#313E35]/6 bg-[#f8f9f9]/50 p-8 md:p-10">
                   <div>
                     <h3 className="text-[#313E35] text-sm font-semibold uppercase tracking-wide mb-2">Partenaires des entreprises</h3>
                     <p className="text-[#4d6263] text-sm leading-relaxed">Conseil – Contentieux – Négociation – Formation</p>
@@ -213,7 +213,7 @@ export default function CompetencesPage() {
                     <div className="w-12 h-[2px] bg-[#E5493D] mt-4" />
                   </div>
                 </div>
-                <div className="rounded-2xl border border-[#313E35]/6 bg-white p-8 md:p-10">
+                <div className="rounded-2xl border border-[#313E35]/6 bg-[#f8f9f9]/50 p-8 md:p-10">
                   <ul className="space-y-2.5">
                     {[
                       "Contrat de travail",
@@ -259,11 +259,9 @@ export default function CompetencesPage() {
               </div>
               <div className="grid sm:grid-cols-2 gap-6">
                 {[
-                  { title: 'Contrôle fiscal', items: ["On subit souvent ce que l'on ne prépare pas ou insuffisamment", "Méfiance mais pas défiance, collaborer au contrôle tout en maîtrisant le niveau des informations délivrées", "Expliciter vos décisions de gestion", "Replacer la gestion fiscale de votre entreprise dans un juste contexte : un outil pour l'entreprise et non une fin en soi"] },
-                  { title: 'Fusions – Acquisitions, TUP, Transmissions', items: ["Audit fiscal préalable à une acquisition", "Contrôle fiscal « à blanc » de votre entreprise", "Fusions – Acquisitions", "Accompagnement lors de la cession", "Création de tous types de sociétés"] },
-                  { title: 'Formation fiscale', items: ["Ce qui se conçoit bien s'énonce clairement…", "L'occasion d'un enrichissement personnel favorisé par l'échange", "Formation à la carte pour vos équipes"] },
+                  { title: 'Fusions - Acquisitions, Transmissions', items: ["Audit fiscal préalable à une acquisition", "Fusions - Acquisitions", "Accompagnement lors de la cession"] },
                   { title: 'Contentieux fiscal et douanier', items: ["Examen de la régularité des procédures", "Computation des délais et rédaction de réclamations", "Saisines des diverses commissions fiscales", "Sollicitation d'entretiens hiérarchiques", "Recours devant tous types de juridictions"] },
-                  { title: 'Droit des sociétés', items: ["Constitution et rédaction des statuts, pactes d'associés et règlements intérieurs", "Accompagnement des opérations de fusions, scissions et apports partiels d'actifs", "Restructurations et mise en place de holdings animatrices", "Gestion des conflits entre associés et responsabilité des dirigeants"] },
+                  { title: 'Droit des sociétés', items: ["Création de tous types de sociétés", "Constitution et rédaction des statuts, pactes d'associés et règlements intérieurs", "Accompagnement des opérations de fusions, scissions et apports partiels d'actifs", "Restructurations et mise en place de holdings animatrices", "Gestion des conflits entre associés et responsabilité des dirigeants"] },
                 ].map((block) => (
                   <div key={block.title} className="rounded-2xl border border-[#313E35]/6 bg-white p-6 md:p-8">
                     <h3 className="text-[#313E35] text-xs font-semibold tracking-[0.15em] uppercase mb-5">{block.title}</h3>

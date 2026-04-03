@@ -21,11 +21,11 @@ Spécialiste en droit pénal dès 1997, et particulièrement en droit pénal des
       engagements={[
         "Membre de l'APM (Association Progrès du Management) depuis 2011",
         "Ancien Membre de la Table Ronde Française jusqu'en 2003",
-        "Professeur de Droit pénal des affaires — ESC SKEMA (2006–2010)",
-        "Professeur de Droit pénal des affaires — IAE (2005–2006)",
-        "Chargé de cours en Droit pénal des affaires — Faculté libre de droit, DESS juriste d'entreprise (2002–2005)",
-        "Responsable de la formation en Droit pénal — CRFPB, Cour d'appel de Douai (1999–2001)",
-        "Professeur de Droit pénal des affaires — EDHEC (1987–1990)",
+        "Professeur de Droit pénal des affaires - ESC / SKEMA (2006–2010)",
+        "Professeur de Droit pénal des affaires - IAE (Institut d'Administration des Entreprises) (2005–2006)",
+        "Chargé de cours en Droit pénal des affaires - Université Catholique de Lille, DESS juriste d'entreprise (2002–2005)",
+        "Responsable de la formation en Droit pénal - CRFPB, Cour d'appel de Douai (1999–2001)",
+        "Professeur de Droit pénal des affaires - EDHEC (1987–1990)",
       ]}
       competences={[
         { label: 'Droit civil & Droit commercial', href: '/competences#droit-commercial' },

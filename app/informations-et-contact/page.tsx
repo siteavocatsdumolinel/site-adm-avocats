@@ -14,7 +14,6 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeInSection>
             <div className="flex items-center gap-3 mb-6">
-              <span className="w-8 h-[1px] bg-[#E5493D]" />
               <span className="text-[#E5493D] text-xs tracking-[0.3em] uppercase">Le cabinet</span>
             </div>
             <h1

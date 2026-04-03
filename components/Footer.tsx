@@ -29,7 +29,7 @@ export default function Footer() {
               Adresse
             </h3>
             <address className="not-italic text-white/50 text-sm leading-relaxed space-y-1">
-              <p>Centre d'affaires du Molinel – Bat E</p>
+              <p>Centre d'Affaires du Molinel – Bat E</p>
               <p>Avenue de la Marne</p>
               <p>Allée de la Marque</p>
               <p>59290 Wasquehal</p>

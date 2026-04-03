@@ -59,16 +59,16 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-[100] bg-white border-b border-[#313E35]/8 transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center h-20">
+        <div className="grid grid-cols-3 items-center h-24">
 
           {/* Logo — gauche */}
           <Link href="/" className="flex items-center" aria-label="ADM Avocats du Molinel - Accueil">
             <Image
               src="/images/logo_adm.png"
               alt="ADM Avocats du Molinel"
-              width={200}
-              height={70}
-              className="h-20 w-auto object-contain object-left"
+              width={240}
+              height={84}
+              className="h-[5.5rem] w-auto object-contain object-left"
               priority
             />
           </Link>
@@ -127,7 +127,7 @@ export default function Navbar() {
 
       {/* Menu mobile */}
       <div
-        className={`lg:hidden fixed inset-0 top-16 bg-white z-[110] transition-all duration-300 overflow-y-auto ${
+        className={`lg:hidden fixed inset-0 top-24 bg-white z-[110] transition-all duration-300 overflow-y-auto ${
           mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
