@@ -20,6 +20,7 @@ const lawyers = [
   { name: 'Christophe LECLERCQ', title: 'Avocat en droit social', tags: ['Droit social'], photo: '/images/equipe/christophe-leclerq.jpg', href: '/leclercq-christophe', email: 'cduquesne@admavocats.fr', linkedin: 'https://www.linkedin.com/in/christophe-leclercq-b6a265101/' },
 ]
 
+
 const competences = [
   { label: 'DROIT CIVIL & DROIT COMMERCIAL', href: '/competences#droit-commercial', desc: 'Contrats, contentieux, recouvrement, droit bancaire', iconKey: 'commercial' },
   { label: 'DROIT PÉNAL', href: '/competences#droit-penal', desc: 'Droit pénal des affaires, droit de la presse, responsabilité pénale et civile', iconKey: 'penal' },
