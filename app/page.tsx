@@ -21,6 +21,7 @@ const lawyers = [
 ]
 
 
+
 const competences = [
   { label: 'DROIT CIVIL & DROIT COMMERCIAL', href: '/competences#droit-commercial', desc: 'Contrats, contentieux, recouvrement, droit bancaire', iconKey: 'commercial' },
   { label: 'DROIT PÉNAL', href: '/competences#droit-penal', desc: 'Droit pénal des affaires, droit de la presse, responsabilité pénale et civile', iconKey: 'penal' },
