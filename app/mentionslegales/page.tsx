@@ -55,14 +55,13 @@ export default function MentionsLegalesPage() {
           </Section>
 
           <Section title="Hébergement">
-            <p>
-            Vercel Inc. – 340 S Lemon Ave #4133, Walnut, CA 91789, USA
-         
-            </p>
-            <p>
-            Site : vercel.com – Privacy : vercel.com/legal/privacy-policy
-            </p>
-          </Section>
+  <p>
+    Netlify, Inc. – 512 2nd Street, Suite 200, San Francisco, CA 94107, USA
+  </p>
+  <p>
+    Site : netlify.com – Privacy : netlify.com/privacy
+  </p>
+</Section>
 
           <Section title="Propriété intellectuelle">
             <p>
