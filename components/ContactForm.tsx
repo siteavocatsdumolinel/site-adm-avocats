@@ -17,17 +17,13 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-        name: form.nom,
-        email: form.email,
-        subject: form.sujet || 'Nouveau message depuis le site ADM Avocats',
-        message: form.message,
-      }),
-    })
+    const data = new FormData()
+    data.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? '')
+    data.append('name', form.nom)
+    data.append('email', form.email)
+    data.append('subject', form.sujet || 'Nouveau message depuis le site ADM Avocats')
+    data.append('message', form.message)
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
     if (res.ok) setSubmitted(true)
   }
 
