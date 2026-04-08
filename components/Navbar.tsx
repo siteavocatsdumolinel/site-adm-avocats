@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
+
 const competencesLinks = [
   { label: 'Droit civil & Droit commercial', href: '/competences#droit-commercial' },
   { label: 'Droit pénal', href: '/competences#droit-penal' },
